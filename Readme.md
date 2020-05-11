@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Оксана Кужель](https://up.htmlacademy.ru/htmlcss/28/user/143091).
-* Наставник: [Павел Позняк](https://htmlacademy.ru/htmlcss/28/user/907403).
+* Наставник: [Павел Позняк](https://htmlacademy.ru/profile/id907403).
 
 ---
 
