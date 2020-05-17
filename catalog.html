@@ -39,6 +39,58 @@
     <section>
       <h2>Фильтр товаров</h2>
       <!-- Здесь будет форма фильтра -->
+      <p>Сортировка:</p>
+      <select>
+        <option>по популярности</option>
+      </select>
+
+      <p>Цена: 100 ₽ – 500 ₽</p>
+      <input type="range" min="100" max="500" step="100" valuemin="100" valuemax="400">
+
+      <p>Жирность:</p>
+      <ul>
+        <li>
+          <input type="radio" name="" id="">
+          <p>0%</p>
+        </li>
+        <li>
+          <input type="radio" name="" id="" checked>
+          <p>до 10%</p>
+        </li>
+        <li>
+          <input type="radio" name="" id="">
+          <p>до 30%</p>
+        </li>
+        <li>
+          <input type="radio" name="" id="">
+          <p>выше 30%</p>
+        </li>
+      </ul>
+
+      <p>Наполнители:</p>
+      <ul>
+        <li>
+          <input type="checkbox" checked>
+          <p>шоколадные</p>
+        </li>
+        <li>
+          <input type="checkbox" checked>
+          <p>сахарные присыпки</p>
+        </li>
+        <li>
+          <input type="checkbox">
+          <p>фрукты</p>
+        </li>
+        <li>
+          <input type="checkbox">
+          <p>сиропы</p>
+        </li>
+        <li>
+          <input type="checkbox">
+          <p>джемы</p>
+        </li>
+      </ul>
+      <button type="submit">Применить</button>
     </section>
 
 
@@ -147,10 +199,13 @@
 
     </section>
 
-    <section>
-      <h2>Переключатель страниц</h2>
-      <!-- Здесь будет переключатель страниц -->
-    </section>
+    <ul class="pageset">
+      <li class="active">1</li>
+      <li class="noactive">2</li>
+      <li class="noactive">3</li>
+      <li class="noactive">4</li>
+      <li class="noactive">5</li>
+    </ul>
 
   </main>
 
