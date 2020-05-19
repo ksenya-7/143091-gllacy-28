@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* font-size: 16px;
+  line-height: 24px;
+  font-family: "Arial", sans-serif; */
+  min-width: 1200px;
+  height: 2419px;
+  background-color: #849D8F;
+}
+
+.icecream {
+  width: 267px;
+  height: 267px;
+  border-radius: 50%;
+}
