@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>HTML Academy: Глейси каталог</title>
+  <title>Глейси каталог</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -25,26 +25,35 @@
         <li><a href="blank.html">О компании</a></li>
       </ul>
 
-      <a href="blank.html">поиск</a>
+      <a href="blank.html" aria-label="поиск"></a>
 
       <a href="blank.html">Вход</a>
 
-      <a href="blank.html">2 товара</a>
+      <a href="blank.html" aria-label="корзина">2 товара</a>
       <div class="visually-hidden">
-        <p>
-          <img class="icecream" src="img/basket_ic1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-          Пломбир с апельсиновым джемом
-          <span>1,5 кг х <span>200 руб.</span></span>
-          <span>300 руб.</span>
-        </p>
-        <p>
-          <img class="icecream" src="img/basket_ic2.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-          Пломбир с апельсиновым джемом
-          <span>1,5 кг х <span>200 руб.</span></span>
-          <span>300 руб.</span>
-        </p>
+        <ul>
+          <li>
+            <p>
+              <button type="button" aria-label="удалить из корзины"></button>
+              <img class="icecream" src="img/basket_ic1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+              <a href="#">Пломбир с апельсиновым джемом</a>
+              <span>1,5 кг х <span>200 руб.</span></span>
+              <span>300 руб.</span>
+            </p>
+          </li>
+          <li>
+            <p>
+              <button type="button" aria-label="удалить из корзины"></button>
+              <img class="icecream" src="img/basket_ic2.jpg" width="33" height="33"
+                alt="Клубничный пломбир с присыпкой из белого шоколада">
+              <a href="#">Клубничный пломбир с присыпкой из белого шоколада</a>
+              <span>1,5 кг х <span>300 руб.</span></span>
+              <span>450 руб.</span>
+            </p>
+          </li>
+        </ul>
         <p>Итого: 750 руб.</p>
-        <button type="submit">Оформить заказ</button>
+        <button type="button">Оформить заказ</button>
       </div>
     </nav>
 

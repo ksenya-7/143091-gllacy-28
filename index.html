@@ -25,10 +25,10 @@
         <li><a href="blank.html">О компании</a></li>
       </ul>
 
-      <a href="#">Поиск</a>
+      <a href="blank.html" aria-label="поиск"></a>
       <div class="visually-hidden">
         <form action="#" method="get">
-          <input type="text" name="search" value="Что ищем?">
+          <input type="text" name="search" placeholder="Что ищем?" aria-label="строка поиска мороженого">
         </form>
       </div>
 
@@ -38,10 +38,10 @@
       <div class="visually-hidden">
         <form action="#" method="post">
           <p>
-            <input type="email" name="email" value="Электронная почта" required>
+            <input type="email" name="email" value="Электронная почта" aria-label="электронная почта" required>
           </p>
           <p>
-            <input type="password" name="password" placeholder="Пароль" required>
+            <input type="password" name="password" placeholder="Пароль" aria-label="пароль" required>
           </p>
           <button type="submit">Войти</button>
           <p><a href="#">Забыли пароль?</a></p>
@@ -49,11 +49,11 @@
         </form>
       </div>
 
-      <a href="blank.html">Пусто</a>
+      <a href="blank.html" aria-label="корзина">Пусто</a>
     </nav>
     <div>
       <p>с 10 до 20, ежедневно</p>
-      <a href="tel:+78124502525">8 812 450-25-25</a>
+      <a href="tel:+78124502525" aria-label="телефон компании">8 812 450-25-25</a>
     </div>
   </header>
 
@@ -187,10 +187,30 @@
         <p>Адрес главного офиса<br> и офлайн-магазина:</p>
         <p>ул. Большая Конюшенная,<br>19/8, Санкт-Петербург</p>
         <p>Для заказов по телефону:<br>
-          <a href="tel:+78124502525">8 812 450-25-25</a><br>
+          <a href="tel:+78124502525" aria-label="телефон компании">8 812 450-25-25</a><br>
           (с 10 до 20 ежедневно)</p>
         <!-- Форма обратной связи, которую будем верстать позже  -->
-        <div>Форма обратной связи</div>
+        <button type="submit">Форма обратной связи</button>
+
+        <div class="visually-hidden">
+          <p>Мы обязательно вам ответим!
+
+            <button type="button" aria-label="закрыть окно"></button></p>
+
+          <form action="#" method="get">
+            <p>
+              <input type="text" name="name_vendor" value="Как вас зовут?" aria-label="ваше имя для ответа">
+            </p>
+            <p>
+              <input type="email" name="email" value="Ваша почта для ответа?" aria-label="электронная почта для ответа"
+                required>
+            </p>
+            <p>
+              <textarea rows="5" aria-label="комментарий">Напишите что-нибудь...</textarea>
+            </p>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
       </div>
     </section>
   </main>
@@ -204,26 +224,7 @@
     </ul>
 
     <ul>
-      <li>
-        <a href="#">
-          <p>Для поставщиков</p>
-        </a>
-        <div class="visually-hidden">
-          <form action="#" method="get">
-            <p>
-              <input type="text" name="name_vendor" value="Как вас зовут?">
-            </p>
-            <p>
-              <input type="email" name="email" value="Ваша почта для ответа?" required>
-            </p>
-            <p>
-              <textarea rows="5">Напишите что-нибудь...</textarea>
-            </p>
-            <button type="submit">Отправить</button>
-          </form>
-        </div>
-      </li>
-
+      <li><a href="#">Для поставщиков</a></li>
       <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологические стандарты</a></li>
