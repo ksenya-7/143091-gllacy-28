@@ -14,7 +14,7 @@
       <ul>
         <li>Каталог
           <ul style="visibility:hidden;">
-            <li><a href="blank.html">Новинки</a></li>
+            <li><a href="blank.html"><strong>Новинки</strong></a></li>
             <li><a href="catalog.html">Сливочное</a></li>
             <li><a href="blank.html">Щербеты</a></li>
             <li><a href="blank.html">Фруктовый лед</a></li>
@@ -24,9 +24,28 @@
         <li><a href="blank.html">Доставка и оплата</a></li>
         <li><a href="blank.html">О компании</a></li>
       </ul>
+
       <a href="blank.html">поиск</a>
+
       <a href="blank.html">Вход</a>
+
       <a href="blank.html">2 товара</a>
+      <div class="basket">
+        <p>
+          <img class="icecream" src="img/basket_ic1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+          Пломбир с апельсиновым джемом
+          <span>1,5 кг х <span>200 руб.</span></span>
+          <span>300 руб.</span>
+        </p>
+        <p>
+          <img class="icecream" src="img/basket_ic2.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+          Пломбир с апельсиновым джемом
+          <span>1,5 кг х <span>200 руб.</span></span>
+          <span>300 руб.</span>
+        </p>
+        <p>Итого: 750 руб.</p>
+        <button type="submit">Оформить заказ</button>
+      </div>
     </nav>
 
     <div>
@@ -60,20 +79,27 @@
         <p>Жирность:</p>
         <ul>
           <li>
-            <input type="radio">
-            <p>0%</p>
+            <p>
+              <input id="fat1" type="radio">
+              <label for="fat1">0%</label>
+            </p>
           </li>
           <li>
-            <input type="radio" checked>
-            <p>до 10%</p>
+            <p>
+              <input id="fat2" type="radio" checked>
+              <label for="fat2">до 10%</label></p>
           </li>
           <li>
-            <input type="radio">
-            <p>до 30%</p>
+            <p>
+              <input id="fat3" type="radio">
+              <label for="fat3">до 30%</label>
+            </p>
           </li>
           <li>
-            <input type="radio">
-            <p>выше 30%</p>
+            <p>
+              <input id="fat4" type="radio">
+              <label for="fat4">выше 30%</label>
+            </p>
           </li>
         </ul>
       </div>
@@ -82,24 +108,34 @@
         <p>Наполнители:</p>
         <ul>
           <li>
-            <input type="checkbox" checked>
-            <p>шоколадные</p>
+            <p>
+              <input id="choice1" type="checkbox" checked>
+              <label for="choice1">шоколадные</label>
+            </p>
           </li>
           <li>
-            <input type="checkbox" checked>
-            <p>сахарные присыпки</p>
+            <p>
+              <input id="choice2" type="checkbox" checked>
+              <label for="choice2">сахарные присыпки</label>
+            </p>
           </li>
           <li>
-            <input type="checkbox">
-            <p>фрукты</p>
+            <p>
+              <input id="choice3" type="checkbox">
+              <label for="choice3">фрукты</label>
+            </p>
           </li>
           <li>
-            <input type="checkbox">
-            <p>сиропы</p>
+            <p>
+              <input id="choice4" type="checkbox">
+              <label for="choice4">сиропы</label>
+            </p>
           </li>
           <li>
-            <input type="checkbox">
-            <p>джемы</p>
+            <p>
+              <input id="choice5" type="checkbox">
+              <label for="choice5">джемы</label>
+            </p>
           </li>
         </ul>
       </div>

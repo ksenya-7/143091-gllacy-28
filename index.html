@@ -13,8 +13,8 @@
     <nav>
       <ul>
         <li>Каталог
-          <ul style="visibility:hidden;">
-            <li><a href="blank.html">Новинки</a></li>
+          <ul>
+            <li><a href="blank.html"><strong>Новинки</strong></a></li>
             <li><a href="catalog.html">Сливочное</a></li>
             <li><a href="blank.html">Щербеты</a></li>
             <li><a href="blank.html">Фруктовый лед</a></li>
@@ -24,8 +24,31 @@
         <li><a href="blank.html">Доставка и оплата</a></li>
         <li><a href="blank.html">О компании</a></li>
       </ul>
-      <a href="blank.html">поиск</a>
-      <a href="blank.html">Вход</a>
+
+      <a href="#">Поиск</a>
+      <div class="menu">
+        <form action="#" method="get">
+          <input type="text" name="search" value="Что ищем?">
+        </form>
+      </div>
+
+      <a href="#">
+        <p>Вход</p>
+      </a>
+      <div class="menu">
+        <form action="#" method="post">
+          <p>
+            <input type="email" name="email" value="Электронная почта" required>
+          </p>
+          <p>
+            <input type="password" name="password" placeholder="Пароль" required>
+          </p>
+          <button type="submit">Войти</button>
+          <p><a href="#">Забыли пароль?</a></p>
+          <a href="#">Новая регистрация</a>
+        </form>
+      </div>
+
       <a href="blank.html">Пусто</a>
     </nav>
     <div>
@@ -39,10 +62,11 @@
     <section class="intro">
       <h2>Пускаем слюнки при виде мороженого магазина Gllacy</h2>
 
-      <div class="backlight"></div>
-      <img src="img/icecream_1+2.png" width="647" height="584" alt="Мороженко 1 и 2">
-      <h3 class="cremebrulee">Крем-брюле и пломбир с&nbsp;малиновым джемом</h3>
-      <a href="#">Давайте оба!</a>
+      <div class="backlight">
+        <img src="img/icecream_1+2.png" width="647" height="584" alt="Мороженко 1 и 2">
+        <h3 class="cremebrulee">Крем-брюле и пломбир с&nbsp;малиновым джемом</h3>
+        <a href="#">Давайте оба!</a>
+      </div>
 
       <ul>
         <li class="disable"></li>
@@ -165,7 +189,7 @@
         <p>Для заказов по телефону:<br>
           <a href="tel:+78124502525">8 812 450-25-25</a><br>
           (с 10 до 20 ежедневно)</p>
-        <!-- pop-up, который будем верстать позже  -->
+        <!-- Форма обратной связи, которую будем верстать позже  -->
         <div>Форма обратной связи</div>
       </div>
     </section>
@@ -180,7 +204,26 @@
     </ul>
 
     <ul>
-      <li><a href="#">Для поставщиков</a></li>
+      <li>
+        <a href="#">
+          <p>Для поставщиков</p>
+        </a>
+        <div class="menu">
+          <form action="#" method="get">
+            <p>
+              <input type="text" name="name_vendor" value="Как вас зовут?">
+            </p>
+            <p>
+              <input type="email" name="email" value="Ваша почта для ответа?" required>
+            </p>
+            <p>
+              <textarea rows="5">Напишите что-нибудь...</textarea>
+            </p>
+            <button type="submit">Отправить</button>
+          </form>
+        </div>
+      </li>
+
       <li><a href="#">О производстве</a></li>
       <li><a href="#">Наши документы</a></li>
       <li><a href="#">Экологические стандарты</a></li>

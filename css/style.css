@@ -1,6 +1,7 @@
 body {
   margin: 0;
   padding: 0;
+  /* color: #ffffff; */
   /* font-size: 16px;
   line-height: 24px;
   font-family: "Arial", sans-serif; */
@@ -10,7 +11,29 @@ body {
 }
 
 .icecream {
-  width: 267px;
-  height: 267px;
+  margin: 0;
+  padding: 0;
+  /* width: 267px;
+  height: 267px; */
   border-radius: 50%;
 }
+
+/* .backlight {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 1200px;
+  height: 966px;
+  background-image: url("/img/backlight.png");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.backlight img {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 75px;
+  left: 325px;
+} */
