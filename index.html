@@ -9,7 +9,7 @@
 
 <body>
   <header>
-    <a><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Gllacy"></a>
+    <a href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Gllacy"></a>
     <nav>
       <ul>
         <li><a href="blank.html">Каталог</a>
@@ -38,10 +38,10 @@
       <div class="visually-hidden">
         <form action="#" method="post">
           <p>
-            <input type="email" name="email" value="Электронная почта" aria-label="электронная почта" required>
+            <input type="email" name="email" placeholder="email@example.com" aria-label="электронная почта" required>
           </p>
           <p>
-            <input type="password" name="password" placeholder="Пароль" aria-label="пароль" required>
+            <input type="password" name="password" placeholder="......" aria-label="пароль" required>
           </p>
           <button type="submit">Войти</button>
           <p><a href="#">Забыли пароль?</a></p>
@@ -60,43 +60,42 @@
   <main>
     <h1>Магазин мороженого Gllacy</h1>
     <section class="intro">
-      <h2>Пускаем слюнки при виде мороженого магазина Gllacy</h2>
-
+      <h2 class="visually-hidden">Пускаем слюнки при виде мороженого магазина Gllacy</h2>
       <div class="backlight">
         <img src="img/icecream_1+2.png" width="647" height="584" alt="Мороженко 1 и 2">
         <h3 class="cremebrulee">Крем-брюле и пломбир с&nbsp;малиновым джемом</h3>
-        <a href="#">Давайте оба!</a>
+        <a class="button" href="#" aria-label="положить в корзину">Давайте оба!</a>
       </div>
 
       <ul>
-        <li class="disable"></li>
         <li class="able"></li>
+        <li class="disable"></li>
         <li class="disable"></li>
       </ul>
     </section>
 
     <section>
-      <h2>Плюшки в виде варенья и присыпки</h2>
+      <h2 class="visually-hidden">Плюшки в виде варенья и присыпки</h2>
 
       <ul>
         <li class="raspberry">
           <h3>Малинка даром!</h3>
           <p>При покупке 2 кг любого фруктового мороженого, добавим в&nbsp;ваш заказ банку маринового варенья
             бесплатно.</p>
-          <a href="#">Хочу варенье!</a>
+          <a href="#" aria-label="положить в корзину"><button type="button">Хочу варенье!</button></a>
         </li>
 
         <li class="choko">
           <h3>Шоколадки даром!</h3>
           <p>При покупке 2 кг пломбира, добавим в&nbsp;ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно
             бесплатно.</p>
-          <a href="#">Хочу шоколадки!</a>
+          <a href="#" aria-label="положить в корзину"><button type="button">Хочу шоколадки!</button></a>
         </li>
       </ul>
     </section>
 
     <section>
-      <h2>Хиты</h2>
+      <h2 class="visually-hidden">Хиты</h2>
 
       <ul class="hits">
         <li>
@@ -105,6 +104,7 @@
               alt="Сливочное с&nbsp;апельсиновым джемом и цитрусовой стружкой">
             <p>310 ₽<span>/кг</span></p>
             <h3>Сливочное с апельсиновым джемом и&nbsp;цитрусовой стружкой</h3>
+            <button class="visually-hidden" type="button">Быстрый просмотр</button>
           </div>
         </li>
 
@@ -114,6 +114,7 @@
               alt="Сливочно-кофейное с кусочками шоколада">
             <p>380 ₽<span>/кг</span></p>
             <h3>Сливочно-кофейное с&nbsp;кусочками шоколада</h3>
+            <button class="visually-hidden" type="button">Быстрый просмотр</button>
           </div>
         </li>
 
@@ -123,6 +124,7 @@
               alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p>355 ₽<span>/кг</span></p>
             <h3>Сливочно-клубничное с&nbsp;присыпкой из&nbsp;белого шоколада</h3>
+            <button class="visually-hidden" type="button">Быстрый просмотр</button>
           </div>
         </li>
 
@@ -132,13 +134,14 @@
               alt="Сливочное крем-брюле с карамельной подливкой ">
             <p>415 ₽<span>/кг</span></p>
             <h3>Сливочное крем-брюле с&nbsp;карамельной подливкой</h3>
+            <button class="visually-hidden" type="button">Быстрый просмотр</button>
           </div>
         </li>
       </ul>
     </section>
 
     <section>
-      <h2>Преимущества</h2>
+      <h2 class="visually-hidden">Преимущества</h2>
       <p>Магазин Глэйси – это онлайн и&nbsp;офлайн-магазин по&nbsp;продаже мороженого
         собственного проиводства на&nbsp;развес</p>
       <ul>
@@ -179,7 +182,7 @@
     </div>
 
     <section>
-      <h2>Контакты</h2>
+      <h2 class="visually-hidden">Контакты</h2>
       <img src="img/map.png" alt="Карта с расположением магазина">
       <div class="pin"></div>
 
@@ -189,24 +192,20 @@
         <p>Для заказов по телефону:<br>
           <a href="tel:+78124502525" aria-label="телефон компании">8 812 450-25-25</a><br>
           (с 10 до 20 ежедневно)</p>
-        <!-- Форма обратной связи, которую будем верстать позже  -->
         <button type="submit">Форма обратной связи</button>
-
         <div class="visually-hidden">
           <p>Мы обязательно вам ответим!
-
             <button type="button" aria-label="закрыть окно"></button></p>
-
           <form action="#" method="get">
             <p>
-              <input type="text" name="name_vendor" value="Как вас зовут?" aria-label="ваше имя для ответа">
+              <input type="text" name="name_vendor" placeholder="Имя Фамилия" aria-label="ваше имя для ответа">
             </p>
             <p>
-              <input type="email" name="email" value="Ваша почта для ответа?" aria-label="электронная почта для ответа"
+              <input type="email" name="email" placeholder="email@example.com" aria-label="электронная почта для ответа"
                 required>
             </p>
             <p>
-              <textarea rows="5" aria-label="комментарий">Напишите что-нибудь...</textarea>
+              <textarea rows="5" aria-label="комментарий" placeholder="В свободной форме"></textarea>
             </p>
             <button type="submit">Отправить</button>
           </form>
@@ -217,10 +216,10 @@
 
   <footer>
     <ul>
-      <li><a href="#">Твиттер</a></li>
-      <li><a href="#">Инстаграм</a></li>
-      <li><a href="#">Фейсбук</a></li>
-      <li><a href="#">Вконтакте</a></li>
+      <li><a href="#" aria-label="Твиттер"></a></li>
+      <li><a href="#" aria-label="Инстаграм"></a></li>
+      <li><a href="#" aria-label="Фейсбук"></a></li>
+      <li><a href="#" aria-label="Вконтакте"></a></li>
     </ul>
 
     <ul>
