@@ -65,7 +65,7 @@
 
   <main>
     <section>
-      <h2>Фильтр товаров</h2>
+      <h2 class="visually-hidden">Фильтр товаров</h2>
       <ul>
         <li><a href="index.html">Главная</a></li>
         <li><a href="blank.html">Каталог</a></li>
@@ -76,13 +76,16 @@
       <h4 class="visually-hidden">Форма фильтра</h4>
       <form action="#" method="get">
         <fieldset>
+          <!-- возможно, будет проще стилизовать через дивы -->
           <legend>Сортировка:</legend>
-          <select name="year">
-            <option value="по популярности">по популярности</option>
-            <option value="сначала недорогие">сначала недорогие</option>
-            <option value="сначала дорогие">сначала дорогие</option>
-            <option value="по жирности">по жирности</option>
+          <label for="select"><span class="visually-hidden">сортировка по цене или жирности</span></label>
+          <select id="select" name="choice">
+            <option value="popular">по популярности</option>
+            <option value="cheap_first">сначала недорогие</option>
+            <option value="pricey_first">сначала дорогие</option>
+            <option value="fat">по жирности</option>
           </select>
+
         </fieldset>
 
         <fieldset>
@@ -95,19 +98,19 @@
           <legend>Жирность:</legend>
           <ul>
             <li>
-              <input id="fat1" type="radio" name="fat">
+              <input id="fat1" type="radio" name="fat" value="fat0%">
               <label for="fat1">0%</label>
             </li>
             <li>
-              <input id="fat2" type="radio" name="fat" checked>
+              <input id="fat2" type="radio" name="fat" value="fat10%" checked>
               <label for="fat2">до 10%</label>
             </li>
             <li>
-              <input id="fat3" type="radio" name="fat">
+              <input id="fat3" type="radio" name="fat" value="fat30%">
               <label for="fat3">до 30%</label>
             </li>
             <li>
-              <input id="fat4" type="radio" name="fat">
+              <input id="fat4" type="radio" name="fat" value="fatXL">
               <label for="fat4">выше 30%</label>
             </li>
           </ul>
@@ -117,23 +120,23 @@
           <legend>Наполнители:</legend>
           <ul>
             <li>
-              <input id="choice1" type="checkbox" checked>
+              <input id="choice1" type="checkbox" value="choko" checked>
               <label for="choice1">шоколадные</label>
             </li>
             <li>
-              <input id="choice2" type="checkbox" checked>
+              <input id="choice2" type="checkbox" value="shugar" checked>
               <label for="choice2">сахарные присыпки</label>
             </li>
             <li>
-              <input id="choice3" type="checkbox">
+              <input id="choice3" type="checkbox" value="fruits">
               <label for="choice3">фрукты</label>
             </li>
             <li>
-              <input id="choice4" type="checkbox">
+              <input id="choice4" type="checkbox" value="syrup">
               <label for="choice4">сиропы</label>
             </li>
             <li>
-              <input id="choice5" type="checkbox">
+              <input id="choice5" type="checkbox" value="jam">
               <label for="choice5">джемы</label>
             </li>
           </ul>
@@ -268,11 +271,13 @@
     </section>
 
     <ul class="pageset">
+      <li class="active"><a href="#" aria-label="переход на предыдущую"></a></li>
       <li class="active"><a href="#" aria-label="переход на страницу 1">1</a></li>
       <li class="noactive"><a href="#" aria-label="переход на страницу 2">2</a></li>
       <li class="noactive"><a href="#" aria-label="переход на страницу 3">3</a></li>
       <li class="noactive"><a href="#" aria-label="переход на страницу 4">4</a></li>
       <li class="noactive"><a href="#" aria-label="переход на страницу 5">5</a></li>
+      <li class="active"><a href="#" aria-label="переход на следующую"></a></li>
     </ul>
 
   </main>
