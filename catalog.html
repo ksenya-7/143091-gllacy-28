@@ -105,7 +105,7 @@
         <h3>Сливочное мороженое</h3>
         <h4 class="visually-hidden">Форма фильтра</h4>
         <form class="form-filter" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset>
+          <fieldset class="form-set-filter sort-select">
             <!-- возможно, будет проще стилизовать через дивы -->
             <legend>Сортировка:</legend>
             <label for="select"><span class="visually-hidden">сортировка по цене или жирности</span></label>
@@ -118,13 +118,13 @@
 
           </fieldset>
 
-          <fieldset>
+          <fieldset class="form-set-filter sort-price">
             <legend>Цена: 100 ₽ – 500 ₽</legend>
             <!-- Здесь будет видимость бегунка – чёрточка и два кругляшка
           <div></div>-->
           </fieldset>
 
-          <fieldset>
+          <fieldset class="form-set-filter sort-ratio">
             <legend>Жирность:</legend>
             <ul>
               <li class="filter-option filter-radio">
@@ -146,28 +146,28 @@
             </ul>
           </fieldset>
 
-          <fieldset>
+          <fieldset class="form-set-filter choice-filler">
             <legend>Наполнители:</legend>
             <ul>
               <li class="filter-option filter-checkbox">
-                <input id="choice1" type="checkbox" value="choko" checked>
-                <label for="choice1">шоколадные</label>
+                <input id="filler1" type="checkbox" value="choko" checked>
+                <label for="filler1">шоколадные</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input id="choice2" type="checkbox" value="shugar" checked>
-                <label for="choice2">сахарные присыпки</label>
+                <input id="filler2" type="checkbox" value="shugar" checked>
+                <label for="filler2">сахарные присыпки</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input id="choice3" type="checkbox" value="fruits">
-                <label for="choice3">фрукты</label>
+                <input id="filler3" type="checkbox" value="fruits">
+                <label for="filler3">фрукты</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input id="choice4" type="checkbox" value="syrup">
-                <label for="choice4">сиропы</label>
+                <input id="filler4" type="checkbox" value="syrup">
+                <label for="filler4">сиропы</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input id="choice5" type="checkbox" value="jam">
-                <label for="choice5">джемы</label>
+                <input id="filler5" type="checkbox" value="jam">
+                <label for="filler5">джемы</label>
               </li>
             </ul>
           </fieldset>
@@ -301,31 +301,32 @@
       </section>
 
       <ul class="pageset">
-        <li class="active"><a href="#" aria-label="переход на предыдущую"></a></li>
-        <li class="active"><a href="#" aria-label="переход на страницу 1">1</a></li>
-        <li class="noactive"><a href="#" aria-label="переход на страницу 2">2</a></li>
-        <li class="noactive"><a href="#" aria-label="переход на страницу 3">3</a></li>
-        <li class="noactive"><a href="#" aria-label="переход на страницу 4">4</a></li>
-        <li class="noactive"><a href="#" aria-label="переход на страницу 5">5</a></li>
-        <li class="active"><a href="#" aria-label="переход на следующую"></a></li>
+        <li class="left-row noactive"><a href="#" aria-label="переход на предыдущую"></a></li>
+        <li class="number1-page active"><a href="#" aria-label="переход на страницу 1">1</a></li>
+        <li class="number-page noactive"><a href="#" aria-label="переход на страницу 2">2</a></li>
+        <li class="number-page noactive"><a href="#" aria-label="переход на страницу 3">3</a></li>
+        <li class="number-page noactive"><a href="#" aria-label="переход на страницу 4">4</a></li>
+        <li class="number-page noactive"><a href="#" aria-label="переход на страницу 5">5</a></li>
+        <li class="right-row active"><a href="#" aria-label="переход на следующую"></a></li>
       </ul>
 
     </main>
 
     <footer>
-      <ul class="footer-social">
-        <li><a href="#" aria-label="Фейсбук"></a></li>
-        <li><a href="#" aria-label="Вконтакте"></a></li>
-        <li><a href="#" aria-label="Инстаграм"></a></li>
-        <li><a href="#" aria-label="Твиттер"></a></li>
+      <ul class="footer__social-list">
+        <li><a class="footer__social-link footer__social-link--fb" href="#" aria-label="Фейсбук"></a></li>
+        <li><a class="footer__social-link footer__social-link--vk" href="#" aria-label="Вконтакте"></a></li>
+        <li><a class="footer__social-link footer__social-link--ig" href="#" aria-label="Инстаграм"></a></li>
+        <li><a class="footer__social-link footer__social-link--tw" href="#" aria-label="Твиттер"></a></li>
       </ul>
 
-      <ul class="footer-list">
-        <li><a href="#" aria-label="информация для поставщиков">Для поставщиков</a></li>
-        <!-- не будет ли aria-label лишним? -->
-        <li><a href="#">Наши документы</a></li>
-        <li><a href="#">О производстве</a></li>
-        <li><a href="#">Экологические стандарты</a></li>
+      <ul class="footer__info-list">
+        <li class="footer__info-link footer__info-link--provider"><a href="#"
+            aria-label="информация для поставщиков">Для
+            поставщиков</a></li>
+        <li class="footer__info-link footer__info-link--documents"><a href="#">Наши документы</a></li>
+        <li class="footer__info-link footer__info-link--output"><a href="#">О производстве</a></li>
+        <li class="footer__info-link footer__info-link--eco"><a href="#">Экологические стандарты</a></li>
       </ul>
 
       <div class="footer-copyright">
