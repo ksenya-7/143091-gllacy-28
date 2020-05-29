@@ -187,7 +187,7 @@ ul {
 }
 
 .site-navigation .menu-catalog {
-  /* display: none; */
+  display: none;
   position: relative;
   top: 105px;
   z-index: 10;
@@ -210,9 +210,7 @@ li:focus .menu-catalog {
 
 
 li .catalog-here {
-  display: block;
   width: 61px;
-  padding: 6px 14px 7px 14px;
   text-decoration: none;
   background-color: var(--basic-orange);
   border-radius: 26px;
