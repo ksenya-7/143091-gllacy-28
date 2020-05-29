@@ -14,8 +14,6 @@
   --basic-beige: #F8F7F4;
   --gradientbutton-lightorange: #F26843;
   --gradientbutton-darkorange: #E74A35;
-  --button-active-black07: rgba(0, 0, 0, 0.07);
-  --button-active-black07: rgba(0, 0, 0, 0.07);
   --button-active-shadow: #942718;
   --text-shadow: rgba(160, 32, 11, 0.76);
   --box-shadow: rgba(172, 16, 0, 0.64);
@@ -27,11 +25,16 @@
   --link-underline-dark: rgba(50, 50, 50, 0.3);
   --social-outline: rgba(255, 255, 255, 0.5);
   --box-shadow: rgba(0, 0, 0, 0.4);
+  --item-shadow: rgba(0, 0, 0, 0.2);
+  --button-active-black07: rgba(0, 0, 0, 0.07);
   --menu-shadow-active: #696969;
   --menu-active: #EDEDED;
   --price-kg: #ABABAB;
-  --item-shadow: rgba(0, 0, 0, 0.2);
   --fon-contacts: #FEFEFE;
+  --basket-underline: #CACAC7;
+  --fon-raspberry: #490200;
+  --fon-choko: #573720;
+  --fon-pattern: #efe5cc;
 }
 
 @font-face {
@@ -335,7 +338,7 @@ li.item-menu-here a {
   margin-top: 20px;
   padding-left: 15px;
   background-color: var(--basic-white);
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 1px solid var(--border-input);
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -376,7 +379,7 @@ li.item-menu-here a {
   margin-top: 20px;
   padding-left: 15px;
   background-color: var(--basic-white);
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 1px solid var(--border-input);
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -481,7 +484,7 @@ li.item-menu-here a {
   padding: 0;
   width: 510px;
   height: 1px;
-  background-color: #CACAC7;
+  background-color: var(--basket-underline);
 }
 
 .basket-item-name {
@@ -661,12 +664,12 @@ a.tel {
 
 .bun-raspberry {
   background-image: url("/img/fon_raspberry.jpg");
-  background-color: #490200;
+  background-color: var(--fon-raspberry);
 }
 
 .bun-choko {
   background-image: url("/img/fon_choko.jpg");
-  background-color: #573720;
+  background-color: var(--fon-choko);
 }
 
 .bun-list h3 {
@@ -787,7 +790,7 @@ option {
   height: 306px;
   color: var(--basic-grey);
   background-image: url(/img/pattern.jpg);
-  background-color: #efe5cc;
+  background-color: var(--fon-pattern);
   background-repeat: repeat no-repeat;
   border-radius: 16px;
 }
@@ -898,7 +901,7 @@ article span {
   margin-top: 35px;
   padding-left: 14px;
   background-color: var(--basic-white);
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 1px solid var(--border-input);
   box-sizing: border-box;
   border-radius: 6px;
 }
@@ -1210,7 +1213,7 @@ li .footer__social-link--fb {
   margin-top: 20px;
   padding-left: 14px;
   background-color: var(--basic-white);
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 1px solid var(--border-input);
   box-sizing: border-box;
   border-radius: 4px;
 }
@@ -1225,7 +1228,7 @@ li .footer__social-link--fb {
   padding-top: 16px;
   padding-left: 14px;
   background-color: var(--basic-white);
-  border: 1px solid rgba(178, 178, 178, 0.52);
+  border: 1px solid var(--border-input);
   box-sizing: border-box;
   border-radius: 4px;
 }
