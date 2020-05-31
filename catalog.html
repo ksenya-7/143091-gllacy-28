@@ -5,21 +5,28 @@
   <meta charset="utf-8">
   <title>Глейси каталог</title>
   <link rel="stylesheet" href="css/normalize.css">
+  <!-- <link rel="stylesheet" href="css/outlines.css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <div class="wrapper">
-    <header>
+  <div class="wrapper wrapper-catalog">
+
+    <header class="container">
       <nav class="main-navigation">
-        <a href="index.html">
-          <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Gllacy">
-        </a>
+        <div class="header-logo">
+          <a href="index.html">
+            <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Gllacy">
+          </a>
+        </div>
         <ul class="site-navigation">
-          <li><a class="navigation-menu catalog-here" href="blank.html"><span>Каталог</span></a>
-            <ul class="menu-catalog">
+          <li class="catalog-menu catalog-here">
+            <a class="navigation-menu" href="blank.html">
+              <span>Каталог</span>
+            </a>
+            <ul class="catalog-submenu">
               <li><a href="blank.html"><strong>Новинки</strong></a></li>
-              <li class="item-menu-here"><a href="catalog.html">Сливочное</a></li>
+              <li><a href="catalog.html">Сливочное</a></li>
               <li><a href="blank.html">Щербеты</a></li>
               <li><a href="blank.html">Фруктовый лед</a></li>
               <li><a href="blank.html">Мелорин</a></li>
@@ -29,72 +36,75 @@
           <li><a class="navigation-menu" href="blank.html"><span>О компании</span></a></li>
         </ul>
 
-        <div class="search-navigation">
-          <a href="blank.html" aria-label="поиск"></a>
-          <form class="form-search" action="#" method="get">
-            <label>
-              <span class="visually-hidden">поиск по сайту</span>
-              <input type="search" name="search" placeholder="Что ищем?">
-            </label>
-          </form>
-        </div>
+        <div class="header-navigation">
+          <div class="search-navigation">
+            <a href="blank.html" aria-label="поиск"></a>
+            <form class="form-search" action="#" method="get">
+              <label>
+                <span class="visually-hidden">поиск по сайту</span>
+                <input type="search" name="search" placeholder="Что ищем?">
+              </label>
+            </form>
+          </div>
 
-        <div class="user-navigation">
-          <a href="#" aria-label="вход в личный кабинет">
-            Вход
-          </a>
-          <form class="form-user" action="https://echo.htmlacademy.ru" method="post">
-            <label><span class="visually-hidden">введите вашу электронную почту</span>
-              <input type="email" name="email" placeholder="email@example.com" required>
-            </label>
-            <label><span class="visually-hidden">введите ваш пароль</span>
-              <input type="password" name="password" placeholder="......" required>
-            </label>
-            <div class="user-bottom">
-              <button type="submit">Войти</button>
-              <div class="bottom-right">
-                <a href="#"><span>Забыли пароль?</span></a>
-                <a href="#"><span>Новая регистрация</span></a>
+          <div class="user-navigation">
+            <a href="#" aria-label="вход в личный кабинет">
+              Вход
+            </a>
+            <form class="form-user" action="https://echo.htmlacademy.ru" method="post">
+              <label><span class="visually-hidden">введите вашу электронную почту</span>
+                <input type="email" name="email" placeholder="email@example.com" required>
+              </label>
+              <label><span class="visually-hidden">введите ваш пароль</span>
+                <input type="password" name="password" placeholder="......" required>
+              </label>
+              <div class="user-bottom">
+                <button type="submit">Войти</button>
+                <div class="bottom-right">
+                  <a href="#"><span>Забыли пароль?</span></a>
+                  <a href="#"><span>Новая регистрация</span></a>
+                </div>
               </div>
-            </div>
-          </form>
-        </div>
+            </form>
+          </div>
 
-        <div class="basket-navigation">
-          <a class="basket" href="blank.html" aria-label="корзина">2 товара</a>
-        </div>
-        <div class="basket-fill">
-          <ul class="basket-list">
-            <li class="basket-list-item">
-              <button type="button" aria-label="удалить из корзины"></button>
-              <a href="#"><img class="icecream" src="img/basket_ic1.jpg" width="33" height="33"
-                  alt="Пломбир с апельсиновым джемом"><span class="basket-item-name">Пломбир с апельсиновым
-                  джемом</span></a>
-              <span>1,5 кг х <span class="price-kg">200 руб.</span></span>
-              <span>300 руб.</span>
-            </li>
-            <li class="basket-list-item">
-              <button type="button" aria-label="удалить из корзины"></button>
-              <a href="#"><img class="icecream" src="img/basket_ic2.jpg" width="33" height="33"
-                  alt="Клубничный пломбир с присыпкой из белого шоколада">
-                <span class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</span></a>
-              <span>1,5 кг х <span class="price-kg">300 руб.</span></span>
-              <span>450 руб.</span>
-            </li>
-          </ul>
-          <div></div>
-          <p>Итого: 750 руб.</p>
-          <button type="button">Оформить заказ</button>
+          <div class="basket-navigation">
+            <a class="basket-link" href="blank.html" aria-label="корзина">2 товара</a>
+            <div class="basket-fill">
+              <ul class="basket-list">
+                <li class="basket-list-item">
+                  <button type="button" aria-label="удалить из корзины"></button>
+                  <a href="#"><img class="icecream" src="img/basket_ic1.jpg" width="33" height="33"
+                      alt="Пломбир с апельсиновым джемом"><span class="basket-item-name">Пломбир с апельсиновым
+                      джемом</span></a>
+                  <span>1,5 кг х <span class="price-kg">200 руб.</span></span>
+                  <span>300 руб.</span>
+                </li>
+                <li class="basket-list-item">
+                  <button type="button" aria-label="удалить из корзины"></button>
+                  <a href="#"><img class="icecream" src="img/basket_ic2.jpg" width="33" height="33"
+                      alt="Клубничный пломбир с присыпкой из белого шоколада">
+                    <span class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</span></a>
+                  <span>1,5 кг х <span class="price-kg">300 руб.</span></span>
+                  <span>450 руб.</span>
+                </li>
+              </ul>
+              <div></div>
+              <p>Итого: 750 руб.</p>
+              <button type="button">Оформить заказ</button>
+            </div>
+          </div>
         </div>
       </nav>
 
-      <div>
+      <div class="worktime-tel">
         <p>с 10 до 20, ежедневно</p>
-        <a class="tel" href="tel:+78124502525">8 812 450-25-25</a>
+        <a class="tel" href="tel:+78124502525" aria-label="телефон компании">8 812 450-25-25</a>
       </div>
     </header>
 
     <main>
+
       <section class="filter-item">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <ul class="breadcrumbs">
@@ -178,7 +188,7 @@
       </section>
 
 
-      <section class="catalog">
+      <section class="catalog-inner">
         <h2 class="visually-hidden">Карточки товаров</h2>
         <ul class="catalog-list">
           <li class="catalog-item">
@@ -301,19 +311,33 @@
 
       </section>
 
-      <ul class="pageset">
-        <li class="left-row noactive"><a href="#" aria-label="переход на предыдущую"></a></li>
-        <li class="number1-page active-page"><a href="#" aria-label="переход на страницу 1">1</a></li>
-        <li class="number2-page noactive-page"><a href="#" aria-label="переход на страницу 2">2</a></li>
-        <li class="number3-page noactive-page"><a href="#" aria-label="переход на страницу 3">3</a></li>
-        <li class="number4-page noactive-page"><a href="#" aria-label="переход на страницу 4">4</a></li>
-        <li class="number5-page noactive-page"><a href="#" aria-label="переход на страницу 5">5</a></li>
-        <li class="right-row active"><a href="#" aria-label="переход на следующую"></a></li>
-      </ul>
+      <div class="page-set">
+        <ul class="page-set__controls-list">
+          <li></li>
+          <li></li>
+        </ul>
+        <ul class="page-set__pages-list">
+          <li class="page-set__pages-item">
+            <a class="page-set__page-link page-set__page-link--active" href="#">1</a>
+          </li>
+          <li class="page-set__pages-item">
+            <a class="page-set__page-link" href="#">2</a>
+          </li>
+          <li class="page-set__pages-item">
+            <a class="page-set__page-link" href="#">3</a>
+          </li>
+          <li class="page-set__pages-item">
+            <a class="page-set__page-link" href="#">4</a>
+          </li>
+          <li class="page-set__pages-item">
+            <a class="page-set__page-link" href="#">5</a>
+          </li>
+        </ul>
+      </div>
 
     </main>
 
-    <footer>
+    <footer class="container footer_list">
       <ul class="footer__social-list">
         <li><a class="footer__social-link footer__social-link--fb" href="#" aria-label="Фейсбук"></a></li>
         <li><a class="footer__social-link footer__social-link--vk" href="#" aria-label="Вконтакте"></a></li>
@@ -325,6 +349,7 @@
         <li class="footer__info-link footer__info-link--provider"><a href="#"
             aria-label="информация для поставщиков">Для
             поставщиков</a></li>
+        <!-- не будет ли aria-label лишним? -->
         <li class="footer__info-link footer__info-link--documents"><a href="#">Наши документы</a></li>
         <li class="footer__info-link footer__info-link--output"><a href="#">О производстве</a></li>
         <li class="footer__info-link footer__info-link--eco"><a href="#">Экологические стандарты</a></li>
