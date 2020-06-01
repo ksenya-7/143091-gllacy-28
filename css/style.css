@@ -513,20 +513,33 @@ header {
 }
 
 .user-navigation>a {
-  align-self: start;
-  width: 42px;
-  height: 20px;
-  padding: 7px 8px 5px 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 92px;
+  height: 32px;
+  background-color: var(--white20-bg);
+  border-radius: 20px;
+}
+
+.user-navigation>a svg {
+  margin-left: 16px;
+}
+
+.user-navigation>a span {
+  margin-right: 16px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  background-color: var(--white20-bg);
-  border-radius: 20px;
 }
 
 .user-navigation:hover>a {
   color: var(--basic-grey);
   background-color: var(--basic-white);
+}
+
+.user-navigation:hover svg path {
+  fill: var(--basic-grey);
 }
 
 .user-navigation a:hover,
@@ -642,27 +655,39 @@ header {
 }
 
 .basket-navigation .basket-empty {
-  align-self: flex-start;
-  width: 45px;
-  height: 20px;
-  padding: 7px 8px 5px 55px;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+  height: 32px;
   background-color: var(--white20-bg);
   border-radius: 20px;
 }
 
 .basket-navigation .basket-link {
-  align-self: flex-start;
-  width: 60px;
-  height: 20px;
-  padding: 7px 8px 5px 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 118px;
+  height: 32px;
+  color: var(--basic-grey);
+  background-color: var(--basic-white);
+  border-radius: 20px;
+}
+
+.basket-navigation a svg {
+  margin-left: 16px;
+}
+
+.basket-navigation>a span {
+  margin-right: 16px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  background-color: var(--white20-bg);
-  border-radius: 20px;
+}
+
+.basket-navigation:hover svg g {
+  fill: var(--basic-grey);
 }
 
 .basket-navigation:hover>a {
@@ -681,7 +706,7 @@ header {
   flex-direction: column;
   position: absolute;
   top: 37px;
-  left: -439px;
+  right: 0;
   z-index: 10;
   width: 539px;
   height: 242px;
