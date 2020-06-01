@@ -234,7 +234,6 @@ header {
   align-items: center;
   width: 1146px;
   margin: 0 auto;
-  padding-top: 9px;
   color: var(--basic-white);
   font-weight: 700;
   font-size: 16px;
@@ -252,8 +251,8 @@ header {
 .header-logo {
   margin: 0;
   padding: 0;
+  margin-top: 9px;
   margin-right: 10px;
-  margin-top: -3px;
 }
 
 .navigation-menu span {
@@ -267,6 +266,7 @@ header {
   display: flex;
   align-items: flex-start;
   position: relative;
+  max-width: 500px;
   margin: 0;
   margin-right: 30px;
   padding: 0;
@@ -440,21 +440,33 @@ header {
 }
 
 .search-navigation a {
-  /* position: relative; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-image: url("/img/loupe.svg");
-  background-repeat: no-repeat;
-  background-position: center;
   background-color: var(--white20-bg);
 }
 
 .search-navigation a:hover,
 .search-navigation a:focus {
-  background-image: url("/img/loupe-dark.svg");
   background-color: var(--basic-white);
   outline: none;
+}
+
+.search-navigation a:hover svg path {
+  fill: var(--basic-gray);
+}
+
+
+.search-navigation:hover a {
+  background-color: var(--basic-white);
+  outline: none;
+}
+
+.search-navigation:hover svg path {
+  fill: var(--basic-gray);
 }
 
 .form-search {
@@ -473,12 +485,6 @@ header {
   display: block;
 }
 
-.search-navigation:hover a {
-  background-image: url("/img/loupe-dark.svg");
-  background-color: var(--basic-white);
-  outline: none;
-}
-
 .form-search input {
   width: 311px;
   height: 44px;
@@ -490,8 +496,6 @@ header {
   box-sizing: border-box;
   border-radius: 4px;
 }
-
-
 
 .user-navigation {
   display: flex;
@@ -820,16 +824,17 @@ header p {
 
 /* intro intro intro intro intro intro intro intro intro intro intro intro intro intro intro intro intro intro  */
 
-main {
+/* main {
   display: flex;
   flex-direction: column;
-  height: 100%;
+  max-height: 100%;
   margin: 0 auto;
-}
-
+} */
+/* 
 .intro {
-  height: 480px;
-}
+  width: 1146px;
+  height: 966px;
+} */
 
 .backlight {
   position: absolute;
@@ -838,7 +843,6 @@ main {
   height: 966px;
   margin: -150px -27px;
   padding: 0;
-  /* pointer-events: none; */
 }
 
 .backlight img {
@@ -878,13 +882,13 @@ main {
 
 .intro-controls {
   display: flex;
+  justify-content: space-between;
   position: absolute;
   width: 79px;
   height: 21px;
   margin: 0;
   padding: 0;
-  margin-top: 250px;
-  justify-content: space-between;
+  margin-top: 150px;
 }
 
 .able button {
@@ -1381,8 +1385,6 @@ article a:focus span {
   width: 146px;
 }
 
-.page-set__pages-item {}
-
 .page-set__page-link {
   display: flex;
   justify-content: center;
@@ -1507,7 +1509,9 @@ article a:focus span {
 }
 
 .footer__social-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 32px;
   height: 32px;
   background-repeat: no-repeat;
@@ -1521,41 +1525,21 @@ article a:focus span {
   border: 2px solid var(--social-outline70);
 }
 
-.footer__social-link--fb {
-  background-image: url("/img/sl-fb80.svg");
+.footer__social-link svg {
+  fill-opacity: .8;
 }
 
-.footer__social-link--fb:hover,
-.footer__social-link--fb:focus {
-  background-image: url("/img/sl-fb.svg");
+.footer__social-link--fb:hover svg,
+.footer__social-link--fb:focus svg,
+.footer__social-link--vk:hover svg,
+.footer__social-link--vk:focus svg,
+.footer__social-link--ig:hover svg,
+.footer__social-link--ig:focus svg,
+.footer__social-link--tw:hover svg,
+.footer__social-link--tw:focus svg {
+  fill-opacity: 1;
 }
 
-.footer__social-link--vk {
-  background-image: url("/img/sl-vk80.svg");
-}
-
-.footer__social-link--vk:hover,
-.footer__social-link--vk:focus {
-  background-image: url("/img/sl-vk.svg");
-}
-
-.footer__social-link--ig {
-  background-image: url("/img/sl-instagram80.svg");
-}
-
-.footer__social-link--ig:hover,
-.footer__social-link--ig:focus {
-  background-image: url("/img/sl-instagram.svg");
-}
-
-.footer__social-link--tw {
-  background-image: url("/img/sl-twitter80.svg");
-}
-
-.footer__social-link--tw:hover,
-.footer__social-link--tw:focus {
-  background-image: url("/img/sl-twitter.svg");
-}
 
 .footer__info-list {
   display: flex;
