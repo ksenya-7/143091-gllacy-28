@@ -86,26 +86,33 @@
                   fill="#343434" />
                 <path d="M5.93506 4.03003L6.97297 13H17.5032l1.1891-8.96997H5.93506z" fill="#E84D37" /></svg>
               <span>2 товара</span></a>
+
+
             <div class="basket-fill">
-              <ul class="basket-list">
-                <li class="basket-list-item">
-                  <button type="button" aria-label="удалить из корзины"></button>
-                  <a href="#"><img class="icecream" src="img/basket_ic1.jpg" width="33" height="33"
-                      alt="Пломбир с апельсиновым джемом"><span class="basket-item-name">Пломбир с апельсиновым
-                      джемом</span></a>
-                  <span>1,5 кг х <span class="price-kg">200 руб.</span></span>
-                  <span>300 руб.</span>
-                </li>
-                <li class="basket-list-item">
-                  <button type="button" aria-label="удалить из корзины"></button>
-                  <a href="#"><img class="icecream" src="img/basket_ic2.jpg" width="33" height="33"
-                      alt="Клубничный пломбир с присыпкой из белого шоколада">
-                    <span class="basket-item-name">Клубничный пломбир с присыпкой из белого шоколада</span></a>
-                  <span>1,5 кг х <span class="price-kg">300 руб.</span></span>
-                  <span>450 руб.</span>
-                </li>
-              </ul>
-              <div></div>
+
+              <div class="basket-table">
+                <ul class="basket-list">
+                  <li class="basket-list-item">
+                    <div class="row1"><button type="button" aria-label="удалить из корзины"></button></div>
+                    <div class="row2"><img class="icecream" src="img/basket_ic1.jpg" width="33" height="33"
+                        alt="Пломбир с апельсиновым джемом"></div>
+                    <div class="row3"><a href="#">Пломбир с апельсиновым джемом</a></div>
+                    <div class="row4">1,5 кг х <span class="price-kg">200 руб.</span></div>
+                    <div class="row5">300 руб.</div>
+                  </li>
+
+                  <li class="basket-list-item">
+                    <div class="row1"><button type="button" aria-label="удалить из корзины"></button></div>
+                    <div class="row2"><img class="icecream" src="img/basket_ic2.jpg" width="33" height="33"
+                        alt="Клубничный пломбир с присыпкой из белого шоколада"></div>
+                    <div class="row3"><a href="#">Клубничный пломбир с&nbsp;присыпкой из&nbsp;белого&nbsp;шоколада</a>
+                    </div>
+                    <div class="row4">1,5 кг х <span class="price-kg">300 руб.</span></div>
+                    <div class="row5">450 руб.</div>
+                  </li>
+                </ul>
+              </div>
+
               <p>Итого: 750 руб.</p>
               <button type="button">Оформить заказ</button>
             </div>
@@ -132,6 +139,7 @@
         <h3>Сливочное мороженое</h3>
         <h4 class="visually-hidden">Форма фильтра</h4>
         <form class="form-filter" action="https://echo.htmlacademy.ru" method="get">
+
           <fieldset class="form-set-filter sort-select">
             <!-- возможно, будет проще стилизовать через дивы -->
             <legend>Сортировка:</legend>
@@ -151,9 +159,9 @@
           <div></div>-->
           </fieldset>
 
-          <fieldset class="form-set-filter sort-ratio">
+          <fieldset class="form-set-filter sort-radio">
             <legend>Жирность:</legend>
-            <ul>
+            <ul class="filter-radio">
               <li class="filter-option filter-radio">
                 <input id="fat1" type="radio" name="fat" value="fat0%">
                 <label for="fat1">0%</label>
@@ -175,7 +183,7 @@
 
           <fieldset class="form-set-filter choice-filler">
             <legend>Наполнители:</legend>
-            <ul>
+            <ul class="filter-checkbox">
               <li class="filter-option filter-checkbox">
                 <input id="filler1" type="checkbox" value="choko" checked>
                 <label for="filler1">шоколадные</label>
@@ -330,7 +338,7 @@
       </div>
 
       <div class="page-set container">
-        <ul class="page-set__pages-list">
+        <ul class="page-set__pages-list" aria-label="на предыдущую страницу"><a href="#"></a></li>
           <li class="page-set__controls left"></li>
           <li class="page-set__pages-item">
             <a class="page-set__page-link page-set__page-link--active" href="#">1</a>
@@ -347,7 +355,7 @@
           <li class="page-set__pages-item">
             <a class="page-set__page-link" href="#">5</a>
           </li>
-          <li class="page-set__controls right"></li>
+          <li class="page-set__controls right" aria-label="на следующую страницу"><a href="#"></a></li>
         </ul>
       </div>
 
@@ -406,8 +414,8 @@
             aria-label="информация для поставщиков">Для
             поставщиков</a></li>
         <!-- не будет ли aria-label лишним? -->
-        <li class="footer__info-link footer__info-link--documents"><a href="#">Наши документы</a></li>
         <li class="footer__info-link footer__info-link--output"><a href="#">О производстве</a></li>
+        <li class="footer__info-link footer__info-link--documents"><a href="#">Наши документы</a></li>
         <li class="footer__info-link footer__info-link--eco"><a href="#">Экологические стандарты</a></li>
       </ul>
 

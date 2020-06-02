@@ -101,28 +101,29 @@
 
       <h1 class="visually-hidden">Магазин мороженого Gllacy</h1>
       <section class="intro">
-        <div class="">
-          <h2 class="visually-hidden">Пускаем слюнки при виде мороженого магазина Gllacy</h2>
+        <h2 class="visually-hidden">Пускаем слюнки при виде мороженого магазина Gllacy</h2>
 
-          <div class="backlight index1"> </div>
-          <h3 class="cremebrulee">Крем-брюле и пломбир с&nbsp;малиновым джемом</h3>
-          <a class="btn give-both" href="#" aria-label="положить в корзину">Давайте оба!</a>
-
-          <div class="backlight index2">
-            <h3 class="cremebrulee">Шоколадный пломбир и&nbsp;лимонный сорбет</h3>
-            <a class="btn give-both" href="#" aria-label="положить в корзину">Давайте оба!</a>
-          </div>
-
-          <div class="backlight index3">
-            <h3 class="cremebrulee">Пломбир с помадкой и&nbsp;клубничный щербет</h3>
-            <a class="btn give-both" href="#" aria-label="положить в корзину">Давайте оба!</a>
-          </div>
-
-          <ul class="intro-controls">
-            <li class="able"><button type="button" aria-label="выбрать зелёный фон"></button></li>
-            <li class="disable"><button type="button" aria-label="выбрать сизый фон"></button></li>
-            <li class="disable"><button type="button" aria-label="выбрать коричневый фон"></button></li>
+        <div class="slider">
+          <ul class="slider-list">
+            <li class="slider-list__item slide slide-current">
+              <h3 class="slide-title">Крем-брюле и пломбир с&nbsp;малиновым джемом</h3>
+              <a class="btn slide-button" href="#" aria-label="положить в корзину">Давайте оба! </a>
+            </li>
+            <li class="slider-list__item slide">
+              <h3 class="slide-title">Шоколадный пломбир и&nbsp;лимонный сорбет</h3>
+              <a class="btn slide-button" href="#" aria-label="положить в корзину">Давайте оба! </a>
+            </li>
+            <li class="slider-list__item slide">
+              <h3 class="slide-title">Пломбир с помадкой и&nbsp;клубничный щербет</h3>
+              <a class="btn slide-button" href="#" aria-label="положить в корзину">Давайте оба! </a>
+            </li>
           </ul>
+
+          <div class="slider-controls">
+            <button class="able" type="button" aria-label="первый слайд зелёный фон"></button>
+            <button type="button" aria-label="второй слайд сизый фон"></button>
+            <button type="button" aria-label="третий слайд коричневый фон"></button>
+          </div>
         </div>
       </section>
 
@@ -167,7 +168,7 @@
               <img class="icecream" src="img/hit2.jpg" width="267" height="267"
                 alt="Сливочно-кофейное с кусочками шоколада">
               <p>380 ₽<span class="small-kg">/кг</span></p>
-              <h3><span>Сливочно-кофейное с&nbsp;кусочками&nbsp;шоколада</span></h3>
+              <h3><span>Сливочно-кофейное&nbsp;с&nbsp;кусочками шоколада</span></h3>
               <button class="item-button" type="button">Быстрый просмотр</button>
             </div>
           </li>
@@ -194,28 +195,27 @@
         </ul>
       </section>
 
-      <section class="">
+      <section>
         <div class="features">
           <h2 class="visually-hidden">Преимущества</h2>
           <h3>Магазин Глэйси – это онлайн и&nbsp;офлайн-магазин по&nbsp;продаже мороженого
             собственного производства на&nbsp;развес</h3>
           <ul class="features-list">
-            <li class="feature-item">
+            <li class="feature-item modern-self">
               <p>Все наше мороженое изготавливается на&nbsp;собственном производстве,
                 с&nbsp;использованием современного оборудования
                 и&nbsp;проверенных временем технологий.</p>
             </li>
-            <li class="feature-item">
+            <li class="feature-item safe-company">
               <p>Закупка ингредиентов производится только у&nbsp;проверенных фермерских хозяйств и компаний,
-                с&nbsp;которыми
-                нас связывает долговременное сотрудничество.</p>
+                с&nbsp;которыми нас связывает долговременное сотрудничество.</p>
             </li>
-            <li class="feature-item">
+            <li class="feature-item good-milk">
               <p>Для приготовления мороженого используются настоящие сливки и&nbsp;молоко высочайшего качества. Все
                 дополнительные ингредиенты и&nbsp;добавки произведены из&nbsp;натурального, экологически чистого сырья.
               </p>
             </li>
-            <li class="feature-item">
+            <li class="feature-item termo-delivery">
               <p>Доставка нашего мороженого до&nbsp;заказчиков осуществляется в&nbsp;специальном
                 термопаке, который не&nbsp;дает мороженому
                 растаять в&nbsp;пути и&nbsp;позволяет сохранить превосходный вкус.</p>
@@ -234,7 +234,7 @@
           <div class="subscribe-fon">
             <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в&nbsp;курсе
               всего самого вкусного, что у нас происходит. Обещаем не&nbsp;спамить
-              и&nbsp;не&nbsp;слать всякой ненужной ерунды. Честно =)</p>
+              и&nbsp;не&nbsp;слать всякой ненужной ерунды. Честно =&#41;</p>
 
             <form class="form-subscribe" action="https://echo.htmlacademy.ru" method="post">
               <label><span class="visually-hidden">введите вашу электронную почту для подписки</span>
@@ -252,15 +252,12 @@
         <div class="pin"></div>
 
         <div class="contacts__adress">
-          <h3>Адрес главного офиса</h3>
-          <h3>и офлайн-магазина:</h3>
-          <p>ул. Большая Конюшенная,</p>
-          <p>19/8, Санкт-Петербург</p>
-          <h3>Для заказов по телефону:</h3>
-          <a href="tel:+78124502525" aria-label="телефон компании">8 812 450-25-25</a><br>
-          <span>(с 10 до 20 ежедневно)</span>
+          <h3>Адрес главного офиса и офлайн-магазина:</h3>
+          <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+          <span>Для заказов по телефону:</span>
+          <a href="tel:+78124502525" aria-label="телефон компании">8 812 450-25-25</a>
+          <span class="daily-activity">&#40;с 10 до 20 ежедневно&#41;</span>
           <button type="submit">Форма обратной связи</button>
-
         </div>
       </section>
     </main>
@@ -319,8 +316,8 @@
             aria-label="информация для поставщиков">Для
             поставщиков</a></li>
         <!-- не будет ли aria-label лишним? -->
-        <li class="footer__info-link footer__info-link--documents"><a href="#">Наши документы</a></li>
         <li class="footer__info-link footer__info-link--output"><a href="#">О производстве</a></li>
+        <li class="footer__info-link footer__info-link--documents"><a href="#">Наши документы</a></li>
         <li class="footer__info-link footer__info-link--eco"><a href="#">Экологические стандарты</a></li>
       </ul>
 
