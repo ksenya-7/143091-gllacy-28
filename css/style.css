@@ -72,6 +72,15 @@
     url('/font/robotobold.woff') format('woff');
 }
 
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
+html {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
@@ -249,7 +258,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 1146px;
-  margin: 0 auto;
+  margin: 6px auto 0;
   color: var(--basic-white);
   font-weight: 700;
   font-size: 16px;
@@ -267,7 +276,7 @@ header {
 .header-logo {
   margin: 0;
   padding: 0;
-  margin-top: 8px;
+  margin-top: 3px;
   margin-right: 10px;
 }
 
@@ -546,23 +555,27 @@ header {
 
 .user-navigation>a {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   min-width: 92px;
+  max-width: 120px;
   min-height: 32px;
   background-color: var(--white20-bg);
   border-radius: 20px;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .user-navigation>a svg {
-  margin-left: 16px;
+  margin-right: 8px;
 }
 
 .user-navigation>a span {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 3px;
-  margin-right: 16px;
+  /* margin-top: 3px; */
+  /* margin-right: 16px; */
+  padding: 8px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -693,12 +706,15 @@ header {
 
 .basket-navigation .basket-empty {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   min-width: 100px;
+  max-width: 130px;
   min-height: 32px;
+  padding: 0 16px;
   background-color: var(--white20-bg);
   border-radius: 20px;
+  box-sizing: border-box;
 }
 
 .basket-navigation .basket-link {
@@ -711,17 +727,19 @@ header {
   color: var(--basic-grey);
   background-color: var(--basic-white);
   border-radius: 20px;
+
 }
 
 .basket-navigation a svg {
-  margin-left: 16px;
+  margin-right: 8px;
 }
 
 .basket-navigation>a span {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 3px;
-  margin-right: 16px;
+  /* display: flex;
+  flex-wrap: wrap; */
+  /* margin-top: 3px;
+  margin-right: 16px; */
+  padding: 8px 0;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -907,9 +925,9 @@ header p {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* margin-top: -0.5px; */
   min-width: 167px;
   min-height: 47px;
+  padding-top: 2px;
 }
 
 .worktime-tel a {
@@ -928,7 +946,7 @@ header p {
 
 .slider {
   position: relative;
-  padding-top: 273px;
+  padding: 274px 0 39px;
   text-align: center;
 }
 
@@ -943,13 +961,15 @@ header p {
 }
 
 .slide-current {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .slide-title {
-  margin: 0 auto;
   margin-bottom: 27px;
-  width: 700px;
+  padding: 0 223px;
   font-weight: 700;
   font-size: 60px;
   line-height: 60px;
@@ -957,10 +977,9 @@ header p {
 
 .slide-button {
   display: block;
-  margin: 0 auto 39px auto;
-  width: 278px;
+  width: 246px;
   min-height: 42px;
-  padding: 9px 0 14px;
+  padding: 9px 16px 12px;
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
@@ -975,7 +994,7 @@ header p {
   position: absolute;
   left: 0;
   z-index: 20;
-  top: 440px;
+  top: 441px;
   margin: 0;
   padding: 0;
   height: 21px;
@@ -1344,7 +1363,7 @@ option {
 
 .catalog-item .icecream {
   position: absolute;
-  top: 0;
+  top: 6px;
   z-index: -1;
   width: 267px;
   height: 267px;
@@ -1357,7 +1376,7 @@ option {
   justify-content: center;
   position: absolute;
   left: -13px;
-  top: -6px;
+  top: 6px;
   z-index: -2;
   min-height: 402px;
   width: 293px;
@@ -1385,8 +1404,7 @@ option {
 .catalog-item h3 {
   position: absolute;
   left: 0;
-  top: 279px;
-  /* margin-top: 0 auto; */
+  top: 286px;
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -1401,7 +1419,7 @@ option {
 
 .catalog-item p {
   position: absolute;
-  top: 207px;
+  top: 213px;
   font-weight: 700;
   font-size: 45px;
   line-height: 45px;
@@ -1419,7 +1437,7 @@ option {
   z-index: 10;
   width: 61px;
   height: 61px;
-  left: 12px;
+  /* left: 12px; */
   top: 5px;
   background-image: url(/img/hit.svg);
 }
@@ -1447,7 +1465,7 @@ option {
   min-height: 258px;
   margin: 0 auto 40px auto;
   /* margin-bottom: 40px; */
-  padding: 24px 20px;
+  padding: 24px 20px 18px;
   color: var(--basic-grey);
   background-image: url(/img/pattern.jpg);
   background-color: var(--fon-pattern);
@@ -1479,15 +1497,9 @@ option {
   position: relative;
   margin: 0;
   padding: 0;
-  padding: 10px 10px 19px 55px;
+  padding: 9px 10px 12px 55px;
   font: inherit;
 }
-
-/* .modern-self {
-  position: relative;
-  grid-column: 1/span 1;
-  grid-row: 1/ span 1;
-} */
 
 .modern-self div {
   position: absolute;
@@ -1498,12 +1510,6 @@ option {
   background-image: url(/img/features-icecream.svg);
 }
 
-/* .safe-company {
-  position: relative;
-  grid-column: 2/span 1;
-  grid-row: 1/ span 1;
-} */
-
 .safe-company div {
   position: absolute;
   left: 0;
@@ -1513,12 +1519,6 @@ option {
   background-image: url(/img/features-cow.svg);
 }
 
-/* .good-milk {
-  position: relative;
-  grid-column: 1/span 1;
-  grid-row: 2/ span 1;
-} */
-
 .good-milk div {
   position: absolute;
   left: 0;
@@ -1527,12 +1527,6 @@ option {
   height: 49px;
   background-image: url(/img/features-eco.svg);
 }
-
-/* .termo-delivery {
-  position: relative;
-  grid-column: 2/span 1;
-  grid-row: 2/ span 1;
-} */
 
 .termo-delivery div {
   position: absolute;
@@ -1554,11 +1548,12 @@ option {
 
 article {
   width: 520px;
-  min-height: 186px;
-  padding: 17px 20px 17px;
+  min-height: 185px;
+  padding: 18px 20px 17px;
   background-image: url(/img/fon_strawberry.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   border-radius: 16px;
 }
 
@@ -1584,7 +1579,7 @@ article h3 {
 
 .article_news svg {
   position: absolute;
-  top: 25px;
+  top: 26px;
 }
 
 .article_news:hover,
@@ -1603,8 +1598,8 @@ article h3 {
   display: flex;
   /* justify-content: center;
   align-items: center; */
-  width: 560px;
-  min-height: 220px;
+  width: 548px;
+  min-height: 210px;
   padding: 5px 6px;
   color: var(--basic-grey);
   background-image: url(/img/fon_post.png);
@@ -1616,7 +1611,7 @@ article h3 {
 .subscribe-fon {
   display: flex;
   flex-direction: column;
-  padding: 29px 16px 35px 20px;
+  padding: 20px 16px 35px 20px;
   /* height: calc(100% - 10px); */
   /* width: 508px;
   min-height: 144px; */
@@ -1625,7 +1620,7 @@ article h3 {
 }
 
 .subscribe-fon p {
-  margin: 0;
+  margin: 5px 0;
   padding: 0;
   margin-bottom: 40px;
 }
@@ -1641,7 +1636,7 @@ article h3 {
 .subscribe input {
   width: 368px;
   min-height: 44px;
-  margin-right: 6px;
+  margin-right: 10px;
   padding-left: 13px;
   background-color: var(--basic-white);
   border: 1px solid var(--border-input);
