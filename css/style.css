@@ -508,7 +508,7 @@ header {
   fill: var(--basic-gray);
 }
 
-.form-search {
+.search-navigation form {
   display: none;
   position: absolute;
   top: 37px;
@@ -520,11 +520,11 @@ header {
   background-color: var(--basic-beige);
 }
 
-.search-navigation:hover .form-search {
+.search-navigation:hover form {
   display: block;
 }
 
-.form-search input {
+.search-navigation input {
   width: 311px;
   min-height: 44px;
   margin-left: 15px;
@@ -598,7 +598,7 @@ header {
   background-color: var(--basic-white);
 }
 
-.form-user {
+.user-navigation form {
   display: none;
   position: absolute;
   top: 37px;
@@ -612,12 +612,12 @@ header {
   background-color: var(--basic-beige);
 }
 
-.user-navigation:hover .form-user,
-.user-navigation:focus .form-user {
+.user-navigation:hover form,
+.user-navigation:focus form {
   display: block;
 }
 
-.form-user input {
+.user-navigation input {
   width: 241px;
   min-height: 44px;
   margin-left: 19px;
@@ -720,14 +720,16 @@ header {
 .basket-navigation .basket-link {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   min-width: 118px;
+  max-width: 148px;
   min-height: 32px;
+  padding: 0 16px;
   color: var(--basic-grey);
   background-color: var(--basic-white);
   border-radius: 20px;
-
+  box-sizing: border-box;
 }
 
 .basket-navigation a svg {
