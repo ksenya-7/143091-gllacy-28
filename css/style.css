@@ -93,7 +93,6 @@ body {
   min-width: 1146px;
   min-height: 1636px;
   background-color: var(--green-bg);
-  outline: none;
 }
 
 ul {
@@ -1125,6 +1124,7 @@ button:active,
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
+  position: relative;
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -1139,7 +1139,31 @@ button:active,
 .breadcrumbs a:hover,
 .breadcrumbs a:focus {
   color: var(--link-hover-footer);
-  border-bottom: 1px solid var(--link-hover-footer30);
+  box-shadow: 0 1px 0 0 var(--link-hover-footer30);
+}
+
+.breadcrumbs::before {
+  content: "";
+  position: absolute;
+  left: 62px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  background-image: url(/img/arrows.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.breadcrumbs::after {
+  content: "";
+  position: absolute;
+  left: 137px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  background-image: url(/img/arrows.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .filter-item h3 {
@@ -1357,6 +1381,7 @@ option {
   width: 267px;
   min-height: 361px;
   margin-right: 26px;
+  outline: none;
 }
 
 .catalog-list li:nth-child(4n) {
