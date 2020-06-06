@@ -44,7 +44,7 @@
                   d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0013 6.5 6.5 6.5 0 106.5 13a6.465 6.465 0 003.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
               </svg>
             </a>
-            <form class="form-search" action="#" method="get">
+            <form action="#" method="get">
               <label>
                 <span class="visually-hidden">поиск по сайту</span>
                 <input type="search" name="search" placeholder="Что ищем?">
@@ -61,7 +61,7 @@
               </svg>
               <span>Вход</span>
             </a>
-            <form class="form-user" action="https://echo.htmlacademy.ru" method="post">
+            <form action="https://echo.htmlacademy.ru" method="post">
               <label><span class="visually-hidden">введите вашу электронную почту</span>
                 <input type="email" name="email" placeholder="email@example.com" required>
               </label>
@@ -90,28 +90,27 @@
 
             <div class="basket-fill">
 
-              <div class="basket-table">
-                <ul class="basket-list">
-                  <li class="basket-list-item">
-                    <div class="row1"><button type="button" aria-label="удалить из корзины"></button></div>
-                    <div class="row2"><img class="icecream" src="img/basket_ic1.jpg" width="33" height="33"
-                        alt="Пломбир с апельсиновым джемом"></div>
-                    <div class="row3"><a href="#">Пломбир с апельсиновым джемом</a></div>
-                    <div class="row4">1,5 кг х <span class="price-kg">200 руб.</span></div>
-                    <div class="row5">300 руб.</div>
-                  </li>
+              <ul class="basket-list">
+                <li class="basket-list-item">
+                  <button type="button" aria-label="удалить из корзины"></button>
+                  <img class="icecream" src="img/basket_ic1.jpg" width="33" height="33"
+                    alt="Пломбир с апельсиновым джемом">
+                  <a href="#"><span>Пломбир с апельсиновым джемом</span></a>
+                  <div class="row4">1,5 кг х <span class="price-kg">200 руб.</span></div>
+                  <div>300 руб.</div>
+                </li>
 
-                  <li class="basket-list-item">
-                    <div class="row1"><button type="button" aria-label="удалить из корзины"></button></div>
-                    <div class="row2"><img class="icecream" src="img/basket_ic2.jpg" width="33" height="33"
-                        alt="Клубничный пломбир с присыпкой из белого шоколада"></div>
-                    <div class="row3"><a href="#">Клубничный пломбир с&nbsp;присыпкой из&nbsp;белого&nbsp;шоколада</a>
-                    </div>
-                    <div class="row4">1,5 кг х <span class="price-kg">300 руб.</span></div>
-                    <div class="row5">450 руб.</div>
-                  </li>
-                </ul>
-              </div>
+                <li class="basket-list-item">
+                  <button type="button" aria-label="удалить из корзины"></button>
+                  <img class="icecream" src="img/basket_ic2.jpg" width="33" height="33"
+                    alt="Клубничный пломбир с присыпкой из белого шоколада">
+                  <a href="#"><span>Клубничный пломбир с&nbsp;присыпкой из&nbsp;белого&nbsp;шоколада</span></a>
+
+                  <div class="row4">1,5 кг х <span class="price-kg">300 руб.</span></div>
+                  <div>450 руб.</div>
+                </li>
+              </ul>
+
 
               <div class="basket-bottom">
                 <p>Итого: 750 руб.</p>
@@ -140,7 +139,7 @@
 
         <h3>Сливочное мороженое</h3>
         <h4 class="visually-hidden">Форма фильтра</h4>
-        <form class="form-filter" action="https://echo.htmlacademy.ru" method="get">
+        <form action="https://echo.htmlacademy.ru" method="get">
 
           <fieldset class="form-set-filter sort-select">
             <!-- возможно, будет проще стилизовать через дивы -->
@@ -192,23 +191,23 @@
             <legend>Наполнители:</legend>
             <ul class="filter-checkbox">
               <li class="filter-option filter-checkbox">
-                <input id="filler1" type="checkbox" value="choko" checked>
+                <input id="filler1" type="checkbox" name="filler" value="choko" checked>
                 <label for="filler1">шоколадные</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input id="filler2" type="checkbox" value="shugar" checked>
+                <input id="filler2" type="checkbox" name="filler" value="shugar" checked>
                 <label for="filler2">сахарные присыпки</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input id="filler3" type="checkbox" value="fruits">
+                <input id="filler3" type="checkbox" name="filler" value="fruits">
                 <label for="filler3">фрукты</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input id="filler4" type="checkbox" value="syrup">
+                <input id="filler4" type="checkbox" name="filler" value="syrup">
                 <label for="filler4">сиропы</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input id="filler5" type="checkbox" value="jam">
+                <input id="filler5" type="checkbox" name="filler" value="jam">
                 <label for="filler5">джемы</label>
               </li>
             </ul>
@@ -223,13 +222,15 @@
         <h2 class="visually-hidden">Карточки товаров</h2>
         <ul class="catalog-list">
           <li class="catalog-item">
-            <img class="icecream" src="img/hit1.jpg" width="267" height="267"
-              alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <p>310 ₽<span class="small-kg">/кг</span></p>
-            <h3><span>Сливочное с апельсиновым джемом и&nbsp;цитрусовой стружкой</span></h3>
-            <div class="card">
-              <button class="item-button" type="button">Быстрый просмотр</button>
-            </div>
+            <a href="">
+              <img class="icecream" src="img/hit1.jpg" width="267" height="267"
+                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+              <p>310 ₽<span class="small-kg">/кг</span></p>
+              <h3><span>Сливочное с апельсиновым джемом и&nbsp;цитрусовой стружкой</span></h3>
+              <div class="card">
+                <button class="item-button" type="button">Быстрый просмотр</button>
+              </div>
+            </a>
           </li>
           <li class="catalog-item">
             <img class="icecream" src="img/hit2.jpg" width="267" height="267"
@@ -262,7 +263,7 @@
           <li class="catalog-item">
             <img class="icecream" src="img/ic5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
             <p>325 ₽<span class="small-kg">/кг</span></p>
-            <h3><span>Сливочное с&nbsp;брусничным джемом</span></h3>
+            <h3><span>Сливочное с&nbsp;брусничным<br>джемом</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
             </div>
@@ -298,7 +299,7 @@
             <img class="icecream" src="img/ic9.jpg" width="267" height="267"
               alt="Сливочно-ванильное с кусочками шоколада">
             <p>440 ₽<span class="small-kg">/кг</span></p>
-            <h3><span>Сливочно-ванильное с&nbsp;кусочками шоколада</span></h3>
+            <h3><span>Сливочно-ванильное с&nbsp;кусочками&nbsp;шоколада</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
             </div>
@@ -355,7 +356,7 @@
             <a class="page-set__page-link" href="#">5</a>
           </li>
           <li class="page-set__controls right" aria-label="на следующую страницу">
-            <a href="#"></a>
+            <!-- <a href="#"></a> -->
           </li>
         </ul>
       </div>
