@@ -374,9 +374,11 @@ header {
 }
 
 .catalog-submenu a {
+  display: flex;
+  align-items: center;
   width: auto;
   height: auto;
-  padding: 7px 5px 6px 12px;
+  padding: 7px 5px 7px 12px;
 }
 
 .catalog-submenu li:first-child a {
@@ -1339,6 +1341,26 @@ option {
   flex-wrap: wrap;
 }
 
+.check {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.check__box {
+  /* position: absolute; */
+  /* top: 0;
+  left: 16px; */
+  width: 24px;
+  height: 20px;
+}
+
+.check span {
+  /* position: absolute; */
+  /* left: 32px; */
+}
+
 .filter-item form button:hover,
 .filter-item form button:focus {
   color: var(--basic-grey);
@@ -1781,7 +1803,7 @@ article h3 {
   width: 1146px;
   margin: 0 auto;
   position: relative;
-  margin-bottom: 35px;
+  margin-bottom: 45px;
 }
 
 .page-set__pages-list {
@@ -1791,7 +1813,6 @@ article h3 {
   min-height: 26px;
   width: 197px;
   margin: 0;
-  /* margin-left: 474px; */
 }
 
 .page-set__pages-item {
@@ -1870,30 +1891,25 @@ article h3 {
 
 
 /* раздел для футера раздел для футера раздел для футера раздел для футера раздел для футера раздел для футера */
+
 .footer_list {
-  /* position: relative; */
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   width: 1146px;
-  padding: 5px 0 40px;
+  padding: 3px 0 40px;
 }
 
-.footer_line {
+.foot_line {
+  position: absolute;
+  top: -16px;
   margin: 0 auto;
   width: 1146px;
-  min-height: 78px;
-  border-top: 1px solid var(--white20-bg);
-}
-
-/* .footer_list::before {
-  content: "";
-  position: absolute;
-  top: -26px;
   height: 1px;
   background-color: var(--white20-bg);
-} */
+}
 
 .footer__social-list {
   display: flex;
@@ -1905,9 +1921,9 @@ article h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 12px;
-  width: 32px;
-  height: 32px;
+  margin-right: 8px;
+  width: 36px;
+  height: 36px;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.8;
@@ -1940,9 +1956,9 @@ article h3 {
   grid-template-columns: 143px 185px;
   /* grid-template-rows: 23px 23px; */
   position: relative;
-  width: 327px;
+  width: 326px;
   min-height: 37px;
-  margin-top: 10px;
+  margin-top: 8px;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -1950,7 +1966,7 @@ article h3 {
 
 .footer__info-link a {
   display: flex;
-  padding: 3px 0 2px 21px;
+  padding: 3px 0 1px 22px;
   margin: 0;
 }
 
@@ -1965,16 +1981,10 @@ article h3 {
 .footer__info-link--provider a div {
   width: 15px;
   height: 13px;
-  margin-right: 6px;
+  margin-right: 7px;
   padding-left: 0;
   background-image: url(/img/heart.svg);
 }
-
-/* 
-
-.footer__info-link a {
-  font-weight: 400;
-} */
 
 .footer__info-link span {
   border-bottom: 1px solid var(--white20-bg);
