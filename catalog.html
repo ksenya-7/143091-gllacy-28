@@ -121,40 +121,53 @@
         </div>
       </nav>
 
-      <div class="worktime-tel">
-        <p>с 10 до 20, ежедневно</p>
-        <a class="tel" href="tel:+78124502525" aria-label="телефон компании">8 812 450-25-25</a>
+      <div class="header-down">
+        <div class="header-bottom">
+          <ul class="breadcrumbs">
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="blank.html">Каталог</a></li>
+            <li><a href="catalog.html">Сливочное</a></li>
+          </ul>
+
+          <div class="worktime-tel">
+            <p>с 10 до 20, ежедневно</p>
+            <a class="tel" href="tel:+78124502525" aria-label="телефон компании">8 812 450-25-25</a>
+          </div>
+
+        </div>
+        <h3>Сливочное мороженое</h3>
       </div>
+
     </header>
 
     <main>
 
-      <section class="filter-item container">
+      <section class="filter-list container">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <ul class="breadcrumbs">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="blank.html">Каталог</a></li>
-          <li><a href="catalog.html">Сливочное</a></li>
-        </ul>
-
-        <h3>Сливочное мороженое</h3>
-        <h4 class="visually-hidden">Форма фильтра</h4>
+        <!-- <h4 class="visually-hidden">Форма фильтра</h4> -->
         <form action="https://echo.htmlacademy.ru" method="get">
 
-          <fieldset class="form-set-filter sort-select">
-            <!-- возможно, будет проще стилизовать через дивы -->
+          <fieldset class="sort-select">
             <legend>Сортировка:</legend>
-            <label for="select"><span class="visually-hidden">сортировка по цене или жирности</span></label>
+            <label for="select">
+              <span class="visually-hidden">сортировка по цене или жирности</span>
+              <div class="arrow-select">
+                <svg width="11" height="10" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 10L0 0h11" fill="#fff" />
+                </svg>
+              </div>
+            </label>
             <select id="select" name="choice">
               <option value="popular">по популярности</option>
               <option value="cheap_first">сначала недорогие</option>
               <option value="pricey_first">сначала дорогие</option>
               <option value="fat">по жирности</option>
+
             </select>
 
           </fieldset>
 
-          <fieldset class="form-set-filter sort-price">
+          <fieldset class="sort-price">
             <legend>Цена: 100 ₽ – 500 ₽</legend>
             <div class="range-controls">
               <div class="scale">
@@ -165,76 +178,143 @@
             </div>
           </fieldset>
 
-          <fieldset class="form-set-filter sort-radio">
+          <fieldset class="sort-radio">
             <legend>Жирность:</legend>
             <ul class="filter-radio_list">
-              <li class="filter-option filter-radio">
-                <input id="fat1" type="radio" name="fat" value="fat0%">
-                <label for="fat1">0%</label>
+              <li class="" tabindex="0">
+                <label class="radio_label">
+                  <input class="radio__input" type="radio" name="fat" value="fat0%">
+                  <svg class="radio__box" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="check__off" fill="none" opacity=".8" stroke="#Ffff" stroke-width="4" cx="11" cy="11"
+                      r="9" />
+                    <circle class="check__on" fill="none" opacity=".8" cx="11" cy="11" r="4" />
+                  </svg>
+                  <span>0%</span>
+                </label>
               </li>
-              <li class="filter-option filter-radio">
-                <input id="fat2" type="radio" name="fat" value="fat10%" checked>
-                <label for="fat2">до 10%</label>
+
+              <li class="" tabindex="0">
+                <label class="radio_label">
+                  <input class="radio__input" type="radio" name="fat" value="fat10%" checked>
+                  <svg class="radio__box" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="check__off" fill="none" opacity=".8" stroke="#Ffff" stroke-width="4" cx="11" cy="11"
+                      r="9" />
+                    <circle class="check__on" fill="none" opacity=".8" cx="11" cy="11" r="4" />
+                  </svg>
+                  <span>до 10%</span>
+                </label>
               </li>
-              <li class="filter-option filter-radio">
-                <input id="fat3" type="radio" name="fat" value="fat30%">
-                <label for="fat3">до 30%</label>
+
+              <li class="" tabindex="0">
+                <label class="radio_label">
+                  <input class="radio__input" type="radio" name="fat" value="fat30%">
+                  <svg class="radio__box" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="check__off" fill="none" opacity=".8" stroke="#Ffff" stroke-width="4" cx="11" cy="11"
+                      r="9" />
+                    <circle class="check__on" fill="none" opacity=".8" cx="11" cy="11" r="4" />
+                  </svg>
+                  <span>до 30%</span>
+                </label>
               </li>
-              <li class="filter-option filter-radio">
-                <input id="fat4" type="radio" name="fat" value="fatXL">
-                <label for="fat4">выше 30%</label>
+
+              <li class="" tabindex="0">
+                <label class="radio_label">
+                  <input class="radio__input" type="radio" name="fat" value="fatXL">
+                  <svg class="radio__box" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <circle class="check__off" fill="none" opacity=".8" stroke="#Ffff" stroke-width="4" cx="11" cy="11"
+                      r="9" />
+                    <circle class="check__on" fill="none" opacity=".8" cx="11" cy="11" r="4" />
+                  </svg>
+                  <span>выше 30%</span>
+                </label>
               </li>
+
             </ul>
+
           </fieldset>
 
-          <fieldset class="form-set-filter choice-filler">
+          <fieldset class="choice-filler">
             <legend>Наполнители:</legend>
             <ul class="filter-checkbox">
 
-              <li class="filter-option filter-checkbox__item">
-                <label class="check option">
-                  <input type="checkbox" name="filler" value="choko" checked>
-                  <!-- <svg class="check__box" width="24" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="check__off"
-                      d="M17.3913 1.73913c.2306 0 .4518.09161.6149.25469.1631.16308.2547.38425.2547.61488v14.7826c0 .2306-.0916.4518-.2547.6149-.1631.1631-.3843.2547-.6149.2547H2.6087c-.23063 0-.4518-.0916-.61488-.2547-.16308-.1631-.25469-.3843-.25469-.6149V2.6087c0-.23063.09161-.4518.25469-.61488.16308-.16308.38425-.25469.61488-.25469h14.7826zm0-1.73913H2.6087C1.91683 0 1.25329.274844.764069.764069.274844 1.25329 0 1.91683 0 2.6087v14.7826c0 .6919.274844 1.3554.764069 1.8446C1.25329 19.7252 1.91683 20 2.6087 20h14.7826c.6919 0 1.3554-.2748 1.8446-.7641.4893-.4892.7641-1.1527.7641-1.8446V2.6087c0-.69187-.2748-1.35541-.7641-1.844631C18.7467.274844 18.0832 0 17.3913 0z"
-                      fill="#fff" />
-                    <path class="check__on"
-                      d="M6.68552 6.51304L4.09018 8.96522l7.13492 6.77388L24 3.62609l-2.5953-2.46087-10.1796 9.65218-4.53958-4.30436z"
-                      fill="#fff" />
-                    <path class="check__on"
-                      d="M19.2587 17.3913c0 .2306-.0966.4518-.2686.6149-.172.1631-.4053.2547-.6485.2547H2.75124c-.24322 0-.47649-.0916-.64847-.2547-.17199-.1631-.26861-.3843-.26861-.6149V2.6087c0-.23063.09662-.4518.26861-.61488.17198-.16308.40525-.25469.64847-.25469H18.2591l1.449-1.382608C19.2932.126574 18.8221.00365521 18.3416 0H2.75124C2.02157 0 1.32178.274844.80582.764069.289862 1.25329 0 1.91683 0 2.6087v14.7826c0 .6919.289862 1.3554.80582 1.8446.51596.4893 1.21575.7641 1.94542.7641H18.3416c.7297 0 1.4295-.2748 1.9454-.7641.516-.4892.8059-1.1527.8059-1.8446V8.84348l-1.8342 1.73912v6.8087z"
-                      fill="#fff" />
-                  </svg> -->
-
+              <li class="filter-checkbox__item">
+                <label class="check">
+                  <input class="check__input" type="checkbox" name="filler" value="choko" checked>
                   <svg class="check__box" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
                     viewBox="0 0 24 20" xml:space="preserve">
-                    <path class="check__on" fill="none" d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
-                    <path class="check__on" fill="none"
+                    <path class="check__on" fill="none" opacity=".8"
+                      d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
+                    <path class="check__on" fill="none" opacity=".8"
                       d="M18.3 17.4c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3-.2-.2-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6.2-.2.4-.3.6-.3h14.7L18.7.3c-.4-.2-.9-.3-1.3-.3H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V8.8l-1.7 1.7v6.9z" />
-                    <path class="check__off" fill="#fff"
+                    <path class="check__off" fill="#fff" opacity=".8"
                       d="M17.4 1.7c.2 0 .5.1.6.3.2.2.3.4.3.6v14.8c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3s-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6s.4-.3.6-.3h14.8zm0-1.7H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V2.6c0-.7-.3-1.4-.8-1.8-.5-.5-1.1-.8-1.8-.8z" />
                   </svg>
                   <span>шоколадные</span>
                 </label>
               </li>
 
+              <li class=" filter-checkbox__item">
+                <label class="check">
+                  <input class="check__input" type="checkbox" name="filler" value="shugar" checked>
+                  <svg class="check__box" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                    viewBox="0 0 24 20" xml:space="preserve">
+                    <path class="check__on" fill="none" opacity=".8"
+                      d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
+                    <path class="check__on" fill="none" opacity=".8"
+                      d="M18.3 17.4c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3-.2-.2-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6.2-.2.4-.3.6-.3h14.7L18.7.3c-.4-.2-.9-.3-1.3-.3H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V8.8l-1.7 1.7v6.9z" />
+                    <path class="check__off" fill="#fff" opacity=".8"
+                      d="M17.4 1.7c.2 0 .5.1.6.3.2.2.3.4.3.6v14.8c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3s-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6s.4-.3.6-.3h14.8zm0-1.7H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V2.6c0-.7-.3-1.4-.8-1.8-.5-.5-1.1-.8-1.8-.8z" />
+                  </svg>
+                  <span>сахарные присыпки</span>
+                </label>
+              </li>
 
+              <li class=" filter-checkbox__item">
+                <label class="check">
+                  <input class="check__input" type="checkbox" name="filler" value="fruits">
+                  <svg class="check__box" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                    viewBox="0 0 24 20" xml:space="preserve">
+                    <path class="check__on" fill="none" opacity=".8"
+                      d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
+                    <path class="check__on" fill="none" opacity=".8"
+                      d="M18.3 17.4c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3-.2-.2-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6.2-.2.4-.3.6-.3h14.7L18.7.3c-.4-.2-.9-.3-1.3-.3H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V8.8l-1.7 1.7v6.9z" />
+                    <path class="check__off" fill="#fff" opacity=".8"
+                      d="M17.4 1.7c.2 0 .5.1.6.3.2.2.3.4.3.6v14.8c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3s-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6s.4-.3.6-.3h14.8zm0-1.7H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V2.6c0-.7-.3-1.4-.8-1.8-.5-.5-1.1-.8-1.8-.8z" />
+                  </svg>
+                  <span>фрукты</span>
+                </label>
+              </li>
 
-              <li class="filter-option filter-checkbox">
-                <input class="visually-hidden" id="filler2" type="checkbox" name="filler" value="shugar" checked>
-                <label for="filler2">сахарные присыпки</label>
+              <li class=" filter-checkbox__item">
+                <label class="check">
+                  <input class="check__input" type="checkbox" name="filler" value="syrup">
+                  <svg class="check__box" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                    viewBox="0 0 24 20" xml:space="preserve">
+                    <path class="check__on" fill="none" opacity=".8"
+                      d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
+                    <path class="check__on" fill="none" opacity=".8"
+                      d="M18.3 17.4c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3-.2-.2-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6.2-.2.4-.3.6-.3h14.7L18.7.3c-.4-.2-.9-.3-1.3-.3H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V8.8l-1.7 1.7v6.9z" />
+                    <path class="check__off" fill="#fff" opacity=".8"
+                      d="M17.4 1.7c.2 0 .5.1.6.3.2.2.3.4.3.6v14.8c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3s-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6s.4-.3.6-.3h14.8zm0-1.7H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V2.6c0-.7-.3-1.4-.8-1.8-.5-.5-1.1-.8-1.8-.8z" />
+                  </svg>
+                  <span>сиропы</span>
+                </label>
               </li>
-              <li class="filter-option filter-checkbox">
-                <input class="visually-hidden" id="filler3" type="checkbox" name="filler" value="fruits">
-                <label for="filler3">фрукты</label>
-              </li>
-              <li class="filter-option filter-checkbox">
-                <input class="visually-hidden" id="filler4" type="checkbox" name="filler" value="syrup">
-                <label for="filler4">сиропы</label>
-              </li>
-              <li class="filter-option filter-checkbox">
-                <input class="visually-hidden" id="filler5" type="checkbox" name="filler" value="jam">
-                <label for="filler5">джемы</label>
+
+              <li class=" filter-checkbox__item">
+                <label class="check">
+                  <input class="check__input" type="checkbox" name="filler" value="jam">
+                  <svg class="check__box" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                    viewBox="0 0 24 20" xml:space="preserve">
+                    <path class="check__on" fill="none" opacity=".8"
+                      d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
+                    <path class="check__on" fill="none" opacity=".8"
+                      d="M18.3 17.4c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3-.2-.2-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6.2-.2.4-.3.6-.3h14.7L18.7.3c-.4-.2-.9-.3-1.3-.3H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V8.8l-1.7 1.7v6.9z" />
+                    <path class="check__off" fill="#fff" opacity=".8"
+                      d="M17.4 1.7c.2 0 .5.1.6.3.2.2.3.4.3.6v14.8c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3s-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6s.4-.3.6-.3h14.8zm0-1.7H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V2.6c0-.7-.3-1.4-.8-1.8-.5-.5-1.1-.8-1.8-.8z" />
+                  </svg>
+                  <span>джемы</span>
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -251,7 +331,7 @@
             <a href="">
               <img class="icecream" src="img/hit1.jpg" width="267" height="267"
                 alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-              <p>310 ₽<span class="small-kg">/кг</span></p>
+              <p>310 <span class="ruble"></span><span class="small-kg">/кг</span></p>
               <h3><span>Сливочное с апельсиновым джемом и&nbsp;цитрусовой стружкой</span></h3>
               <div class="card" tabindex="0">
                 <button class="item-button" type="button">Быстрый просмотр</button>
@@ -261,7 +341,7 @@
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/hit2.jpg" width="267" height="267"
               alt="Сливочно-кофейное с кусочками шоколада">
-            <p>380 ₽<span class="small-kg">/кг</span></p>
+            <p>380 <span class="ruble"></span><span class="small-kg">/кг</span></p>
             <h3><span>Сливочно-кофейное с&nbsp;кусочками шоколада</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
@@ -270,7 +350,7 @@
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/hit3.jpg" width="267" height="267"
               alt="Сливочно-клубничное с присыпкой из белого шоколада">
-            <p>355 ₽<span class="small-kg">/кг</span></p>
+            <p>355 <span class="ruble"></span><span class="small-kg">/кг</span></p>
             <h3><span>Сливочно-клубничное с&nbsp;присыпкой&nbsp;из&nbsp;белого шоколада</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
@@ -279,7 +359,7 @@
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/hit4.jpg" width="267" height="267"
               alt="Сливочное крем-брюле с карамельной подливкой">
-            <p>415 ₽<span class="small-kg">/кг</span></p>
+            <p>415 <span class="ruble"></span><span class="small-kg">/кг</span></p>
             <h3><span>Сливочное крем-брюле с&nbsp;карамельной подливкой</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
@@ -288,7 +368,7 @@
 
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/ic5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
-            <p>325 ₽<span class="small-kg">/кг</span></p>
+            <p>325 <span class="ruble"></span><span class="small-kg">/кг</span></p>
             <h3><span>Сливочное с&nbsp;брусничным<br>джемом</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
@@ -297,7 +377,7 @@
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/ic6.jpg" width="267" height="267"
               alt="Сливочно-черничное с цельными ягодами черники">
-            <p>410 ₽<span class="small-kg">/кг</span></p>
+            <p>410 <span class="ruble"></span><span class="small-kg">/кг</span></p>
             <h3><span>Сливочно-черничное с&nbsp;цельными ягодами черники</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
@@ -306,7 +386,7 @@
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/ic7.jpg" width="267" height="267"
               alt="Сливочно-лимонное с карамельной присыпкой">
-            <p>315 ₽<span class="small-kg">/кг</span></p>
+            <p>315 <span class="ruble"></span><span class="small-kg">/кг</span></p>
             <h3><span>Сливочно-лимонное с&nbsp;карамельной присыпкой</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
@@ -314,7 +394,7 @@
           </li>
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/ic8.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
-            <p>320 ₽<span class="small-kg">/кг</span></p>
+            <p>320 <span class="ruble"></span><span class="small-kg">/кг</span></p>
             <h3><span>Сливочное с&nbsp;шоколадной стружкой</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
@@ -324,7 +404,7 @@
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/ic9.jpg" width="267" height="267"
               alt="Сливочно-ванильное с кусочками шоколада">
-            <p>440 ₽<span class="small-kg">/кг</span></p>
+            <p>440 <span class="ruble"></span><span class="small-kg">/кг</span></p>
             <h3><span>Сливочно-ванильное с&nbsp;кусочками&nbsp;шоколада</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
@@ -332,7 +412,7 @@
           </li>
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/ic10.jpg" width="267" height="267" alt="Сливочноe с ментоловым сиропом">
-            <p>435 ₽<span class="small-kg">/кг</span></p>
+            <p>435 <span class="ruble"></span><span class="small-kg">/кг</span></p>
             <h3><span>Сливочноe с&nbsp;ментоловым сиропом</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
@@ -341,7 +421,7 @@
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/ic11.jpg" width="267" height="267"
               alt="Сливочное с кусочками черного шоколада">
-            <p>355 ₽<span class="small-kg">/кг</span></p>
+            <p>355 <span class="ruble"></span><span class="small-kg">/кг</span></p>
             <h3><span>Сливочное с&nbsp;кусочками черного шоколада</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
@@ -349,7 +429,7 @@
           </li>
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/ic12.jpg" width="267" height="267" alt="Сливочное с мятным сиропом">
-            <p>420 ₽<span class="small-kg">/кг</span></p>
+            <p>420 <span class="ruble"></span><span class="small-kg">/кг</span></p>
             <h3><span>Сливочное с&nbsp;мятным сиропом</span></h3>
             <div class="card">
               <button class="item-button" type="button">Быстрый просмотр</button>
@@ -410,7 +490,7 @@
             </svg></a>
         </li>
         <li><a class="footer__social-link footer__social-link--ig" href="#" aria-label="Инстаграм">
-            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 32 32"
+            <!-- <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 32 32"
               xml:space="preserve">
               <path fill="#fff"
                 d="M20.9 16c0 1.3-.5 2.6-1.5 3.5-.9.9-2.1 1.5-3.4 1.5s-2.6-.5-3.5-1.5c-1-.9-1.5-2.2-1.5-3.5 0-.4 0-.8.1-1.1h-.9v6.8h11.4v-6.8h-.9c.1.3.2.7.2 1.1z" />
@@ -418,7 +498,7 @@
                 d="M16 18.7c.5 0 1-.2 1.5-.5.4-.3.8-.7 1-1.2.2-.5.2-1 .1-1.5s-.4-1-.7-1.4c-.4-.4-.8-.6-1.4-.7-.5-.1-1 0-1.5.2s-.9.5-1.2 1c-.3.4-.4 1-.4 1.5 0 .4.1.7.2 1 .1.3.3.6.6.9.2.2.5.4.9.6.2 0 .5.1.9.1zM21.7 10.3h-3v3h3v-3z" />
               <path fill="#fff"
                 d="M16 0c-3.2 0-6.3.9-8.9 2.7C4.5 4.5 2.4 7 1.2 9.9 0 12.8-.3 16 .3 19.1c.6 3.1 2.1 6 4.4 8.2s5.1 3.8 8.2 4.4c3.1.6 6.3.3 9.2-.9 2.9-1.2 5.4-3.3 7.2-5.9 1.8-2.6 2.7-5.7 2.7-8.9 0-4.2-1.7-8.3-4.7-11.3S20.2 0 16 0zm8 21.7c0 .3-.1.6-.2.9-.1.3-.3.5-.5.8-.2.2-.5.4-.8.5-.2 0-.5.1-.8.1H10.3c-.3 0-.6-.1-.9-.2-.3-.1-.5-.3-.7-.5-.2-.2-.4-.5-.5-.7-.1-.3-.2-.6-.2-.9V10.3c0-.3.1-.6.2-.9.1-.3.3-.5.5-.7.2-.2.5-.4.7-.5.3-.1.6-.2.9-.2h11.4c.3 0 .6.1.9.2.3.1.5.3.8.5.2.2.4.5.5.8 0 .2.1.5.1.8v11.4z" />
-            </svg>
+            </svg> -->
 
             <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g fill="#fff">
@@ -431,6 +511,7 @@
               </g>
             </svg>
           </a></li>
+
         <li><a class="footer__social-link footer__social-link--tw" href="#" aria-label="Твиттер"><svg
               xmlns="http://www.w3.org/2000/svg" width="32" height="32">
               <path fill="#FFF"
