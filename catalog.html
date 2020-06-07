@@ -190,24 +190,50 @@
           <fieldset class="form-set-filter choice-filler">
             <legend>Наполнители:</legend>
             <ul class="filter-checkbox">
-              <li class="filter-option filter-checkbox">
-                <input id="filler1" type="checkbox" name="filler" value="choko" checked>
-                <label for="filler1">шоколадные</label>
+
+              <li class="filter-option filter-checkbox__item">
+                <label class="check option">
+                  <input type="checkbox" name="filler" value="choko" checked>
+                  <!-- <svg class="check__box" width="24" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="check__off"
+                      d="M17.3913 1.73913c.2306 0 .4518.09161.6149.25469.1631.16308.2547.38425.2547.61488v14.7826c0 .2306-.0916.4518-.2547.6149-.1631.1631-.3843.2547-.6149.2547H2.6087c-.23063 0-.4518-.0916-.61488-.2547-.16308-.1631-.25469-.3843-.25469-.6149V2.6087c0-.23063.09161-.4518.25469-.61488.16308-.16308.38425-.25469.61488-.25469h14.7826zm0-1.73913H2.6087C1.91683 0 1.25329.274844.764069.764069.274844 1.25329 0 1.91683 0 2.6087v14.7826c0 .6919.274844 1.3554.764069 1.8446C1.25329 19.7252 1.91683 20 2.6087 20h14.7826c.6919 0 1.3554-.2748 1.8446-.7641.4893-.4892.7641-1.1527.7641-1.8446V2.6087c0-.69187-.2748-1.35541-.7641-1.844631C18.7467.274844 18.0832 0 17.3913 0z"
+                      fill="#fff" />
+                    <path class="check__on"
+                      d="M6.68552 6.51304L4.09018 8.96522l7.13492 6.77388L24 3.62609l-2.5953-2.46087-10.1796 9.65218-4.53958-4.30436z"
+                      fill="#fff" />
+                    <path class="check__on"
+                      d="M19.2587 17.3913c0 .2306-.0966.4518-.2686.6149-.172.1631-.4053.2547-.6485.2547H2.75124c-.24322 0-.47649-.0916-.64847-.2547-.17199-.1631-.26861-.3843-.26861-.6149V2.6087c0-.23063.09662-.4518.26861-.61488.17198-.16308.40525-.25469.64847-.25469H18.2591l1.449-1.382608C19.2932.126574 18.8221.00365521 18.3416 0H2.75124C2.02157 0 1.32178.274844.80582.764069.289862 1.25329 0 1.91683 0 2.6087v14.7826c0 .6919.289862 1.3554.80582 1.8446.51596.4893 1.21575.7641 1.94542.7641H18.3416c.7297 0 1.4295-.2748 1.9454-.7641.516-.4892.8059-1.1527.8059-1.8446V8.84348l-1.8342 1.73912v6.8087z"
+                      fill="#fff" />
+                  </svg> -->
+
+                  <svg class="check__box" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                    viewBox="0 0 24 20" xml:space="preserve">
+                    <path class="check__on" fill="none" d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
+                    <path class="check__on" fill="none"
+                      d="M18.3 17.4c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3-.2-.2-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6.2-.2.4-.3.6-.3h14.7L18.7.3c-.4-.2-.9-.3-1.3-.3H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V8.8l-1.7 1.7v6.9z" />
+                    <path class="check__off" fill="#fff"
+                      d="M17.4 1.7c.2 0 .5.1.6.3.2.2.3.4.3.6v14.8c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3s-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6s.4-.3.6-.3h14.8zm0-1.7H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V2.6c0-.7-.3-1.4-.8-1.8-.5-.5-1.1-.8-1.8-.8z" />
+                  </svg>
+                  <span>шоколадные</span>
+                </label>
               </li>
+
+
+
               <li class="filter-option filter-checkbox">
-                <input id="filler2" type="checkbox" name="filler" value="shugar" checked>
+                <input class="visually-hidden" id="filler2" type="checkbox" name="filler" value="shugar" checked>
                 <label for="filler2">сахарные присыпки</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input id="filler3" type="checkbox" name="filler" value="fruits">
+                <input class="visually-hidden" id="filler3" type="checkbox" name="filler" value="fruits">
                 <label for="filler3">фрукты</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input id="filler4" type="checkbox" name="filler" value="syrup">
+                <input class="visually-hidden" id="filler4" type="checkbox" name="filler" value="syrup">
                 <label for="filler4">сиропы</label>
               </li>
               <li class="filter-option filter-checkbox">
-                <input id="filler5" type="checkbox" name="filler" value="jam">
+                <input class="visually-hidden" id="filler5" type="checkbox" name="filler" value="jam">
                 <label for="filler5">джемы</label>
               </li>
             </ul>
@@ -359,11 +385,13 @@
             <!-- <a href="#"></a> -->
           </li>
         </ul>
+
       </div>
 
     </main>
 
-    <footer class="container footer_list footer_line">
+    <footer class="container footer_list">
+      <div class="foot_line"></div>
       <ul class="footer__social-list">
         <li><a class="footer__social-link footer__social-link--fb" href="#" aria-label="Фейсбук">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
