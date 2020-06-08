@@ -5,7 +5,6 @@
   <meta charset="utf-8">
   <title>Глейси каталог</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <!-- <link rel="stylesheet" href="css/outlines.css"> -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -26,7 +25,7 @@
             </a>
             <ul class="catalog-submenu">
               <li><a href="blank.html"><strong>Новинки</strong></a></li>
-              <li><a href="catalog.html">Сливочное</a></li>
+              <li><a class="active_page">Сливочное</a></li>
               <li><a href="blank.html">Щербеты</a></li>
               <li><a href="blank.html">Фруктовый лед</a></li>
               <li><a href="blank.html">Мелорин</a></li>
@@ -151,11 +150,11 @@
             <legend>Сортировка:</legend>
             <label for="select">
               <span class="visually-hidden">сортировка по цене или жирности</span>
-              <div class="arrow-select">
+              <span class="arrow-select">
                 <svg width="11" height="10" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.5 10L0 0h11" fill="#fff" />
                 </svg>
-              </div>
+              </span>
             </label>
             <select id="select" name="choice">
               <option value="popular">по популярности</option>
@@ -233,6 +232,65 @@
 
           </fieldset>
 
+          <!-- <fieldset class="sort-radio">
+            <legend>Жирность:</legend>
+            <ul class="filter-radio_list">
+              <li class="" tabindex="0">
+                <label class="radio_label">
+                  <input class="radio__input" type="radio" name="fat" value="fat0%">
+                  <svg class="radio__box" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <path class="radio__on" fill="none" opacity="0.8"
+                      d="M11 3.5c1.5 0 2.9.4 4.2 1.3 1.2.8 2.2 2 2.8 3.4.6 1.4.7 2.9.4 4.3s-1 2.8-2 3.8-2.4 1.8-3.8 2-3 .1-4.3-.4c-1.4-.6-2.5-1.5-3.4-2.8-.9-1.2-1.4-2.6-1.4-4.1 0-2 .8-3.9 2.2-5.3C7.1 4.3 9 3.5 11 3.5zM11 0C8.8 0 6.7.6 4.9 1.9 3.1 3.1 1.7 4.8.8 6.8c-.8 2-1 4.2-.6 6.3.4 2.1 1.5 4.1 3 5.6s3.5 2.6 5.6 3c2.1.4 4.3.2 6.4-.6 2-.8 3.7-2.2 4.9-4.1 1.2-1.8 1.9-3.9 1.9-6.1 0-2.9-1.2-5.7-3.2-7.8C16.7 1.2 13.9 0 11 0zm0 15c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4z" />
+                    <path class="radio__off" fill="#fff" opacity="0.8"
+                      d="M11 3.5c1.5 0 2.9.4 4.2 1.3 1.2.8 2.2 2 2.8 3.4.6 1.4.7 2.9.4 4.3s-1 2.8-2 3.8-2.4 1.8-3.8 2-3 .1-4.3-.4c-1.4-.6-2.5-1.5-3.4-2.8-.9-1.2-1.4-2.6-1.4-4.1 0-2 .8-3.9 2.2-5.3C7.1 4.3 9 3.5 11 3.5zM11 0C8.8 0 6.7.6 4.9 1.9 3.1 3.1 1.7 4.8.8 6.8c-.8 2-1 4.2-.6 6.3.4 2.1 1.5 4.1 3 5.6s3.5 2.6 5.6 3c2.1.4 4.3.2 6.4-.6 2-.8 3.7-2.2 4.9-4.1 1.2-1.8 1.9-3.9 1.9-6.1 0-2.9-1.2-5.7-3.2-7.8C16.7 1.2 13.9 0 11 0z" />
+                  </svg>
+                  <span>0%</span>
+                </label>
+              </li>
+
+              <li class="" tabindex="0">
+                <label class="radio_label">
+                  <input class="radio__input" type="radio" name="fat" value="fat10%" checked>
+                  <svg class="radio__box" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <path class="radio__on" fill="#fff" opacity="0.8"
+                      d="M11 3.5c1.5 0 2.9.4 4.2 1.3 1.2.8 2.2 2 2.8 3.4.6 1.4.7 2.9.4 4.3s-1 2.8-2 3.8-2.4 1.8-3.8 2-3 .1-4.3-.4c-1.4-.6-2.5-1.5-3.4-2.8-.9-1.2-1.4-2.6-1.4-4.1 0-2 .8-3.9 2.2-5.3C7.1 4.3 9 3.5 11 3.5zM11 0C8.8 0 6.7.6 4.9 1.9 3.1 3.1 1.7 4.8.8 6.8c-.8 2-1 4.2-.6 6.3.4 2.1 1.5 4.1 3 5.6s3.5 2.6 5.6 3c2.1.4 4.3.2 6.4-.6 2-.8 3.7-2.2 4.9-4.1 1.2-1.8 1.9-3.9 1.9-6.1 0-2.9-1.2-5.7-3.2-7.8C16.7 1.2 13.9 0 11 0zm0 15c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4z" />
+                    <path class="radio__off" fill="none" opacity="0.8"
+                      d="M11 3.5c1.5 0 2.9.4 4.2 1.3 1.2.8 2.2 2 2.8 3.4.6 1.4.7 2.9.4 4.3s-1 2.8-2 3.8-2.4 1.8-3.8 2-3 .1-4.3-.4c-1.4-.6-2.5-1.5-3.4-2.8-.9-1.2-1.4-2.6-1.4-4.1 0-2 .8-3.9 2.2-5.3C7.1 4.3 9 3.5 11 3.5zM11 0C8.8 0 6.7.6 4.9 1.9 3.1 3.1 1.7 4.8.8 6.8c-.8 2-1 4.2-.6 6.3.4 2.1 1.5 4.1 3 5.6s3.5 2.6 5.6 3c2.1.4 4.3.2 6.4-.6 2-.8 3.7-2.2 4.9-4.1 1.2-1.8 1.9-3.9 1.9-6.1 0-2.9-1.2-5.7-3.2-7.8C16.7 1.2 13.9 0 11 0z" />
+                  </svg>
+                  <span>до 10%</span>
+                </label>
+              </li>
+
+              <li class="" tabindex="0">
+                <label class="radio_label">
+                  <input class="radio__input" type="radio" name="fat" value="fat30%">
+                  <svg class="radio__box" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <path class="radio__on" fill="none" opacity="0.8"
+                      d="M11 3.5c1.5 0 2.9.4 4.2 1.3 1.2.8 2.2 2 2.8 3.4.6 1.4.7 2.9.4 4.3s-1 2.8-2 3.8-2.4 1.8-3.8 2-3 .1-4.3-.4c-1.4-.6-2.5-1.5-3.4-2.8-.9-1.2-1.4-2.6-1.4-4.1 0-2 .8-3.9 2.2-5.3C7.1 4.3 9 3.5 11 3.5zM11 0C8.8 0 6.7.6 4.9 1.9 3.1 3.1 1.7 4.8.8 6.8c-.8 2-1 4.2-.6 6.3.4 2.1 1.5 4.1 3 5.6s3.5 2.6 5.6 3c2.1.4 4.3.2 6.4-.6 2-.8 3.7-2.2 4.9-4.1 1.2-1.8 1.9-3.9 1.9-6.1 0-2.9-1.2-5.7-3.2-7.8C16.7 1.2 13.9 0 11 0zm0 15c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4z" />
+                    <path class="radio__off" fill="#fff" opacity="0.8"
+                      d="M11 3.5c1.5 0 2.9.4 4.2 1.3 1.2.8 2.2 2 2.8 3.4.6 1.4.7 2.9.4 4.3s-1 2.8-2 3.8-2.4 1.8-3.8 2-3 .1-4.3-.4c-1.4-.6-2.5-1.5-3.4-2.8-.9-1.2-1.4-2.6-1.4-4.1 0-2 .8-3.9 2.2-5.3C7.1 4.3 9 3.5 11 3.5zM11 0C8.8 0 6.7.6 4.9 1.9 3.1 3.1 1.7 4.8.8 6.8c-.8 2-1 4.2-.6 6.3.4 2.1 1.5 4.1 3 5.6s3.5 2.6 5.6 3c2.1.4 4.3.2 6.4-.6 2-.8 3.7-2.2 4.9-4.1 1.2-1.8 1.9-3.9 1.9-6.1 0-2.9-1.2-5.7-3.2-7.8C16.7 1.2 13.9 0 11 0z" />
+                  </svg>
+                  <span>до 30%</span>
+                </label>
+              </li>
+
+              <li class="" tabindex="0">
+                <label class="radio_label">
+                  <input class="radio__input" type="radio" name="fat" value="fatXL">
+                  <svg class="radio__box" width="22" height="22" xmlns="http://www.w3.org/2000/svg">
+                    <path class="radio__on" fill="none" opacity="0.8"
+                      d="M11 3.5c1.5 0 2.9.4 4.2 1.3 1.2.8 2.2 2 2.8 3.4.6 1.4.7 2.9.4 4.3s-1 2.8-2 3.8-2.4 1.8-3.8 2-3 .1-4.3-.4c-1.4-.6-2.5-1.5-3.4-2.8-.9-1.2-1.4-2.6-1.4-4.1 0-2 .8-3.9 2.2-5.3C7.1 4.3 9 3.5 11 3.5zM11 0C8.8 0 6.7.6 4.9 1.9 3.1 3.1 1.7 4.8.8 6.8c-.8 2-1 4.2-.6 6.3.4 2.1 1.5 4.1 3 5.6s3.5 2.6 5.6 3c2.1.4 4.3.2 6.4-.6 2-.8 3.7-2.2 4.9-4.1 1.2-1.8 1.9-3.9 1.9-6.1 0-2.9-1.2-5.7-3.2-7.8C16.7 1.2 13.9 0 11 0zm0 15c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4z" />
+                    <path class="radio__off" fill="#fff" opacity="0.8"
+                      d="M11 3.5c1.5 0 2.9.4 4.2 1.3 1.2.8 2.2 2 2.8 3.4.6 1.4.7 2.9.4 4.3s-1 2.8-2 3.8-2.4 1.8-3.8 2-3 .1-4.3-.4c-1.4-.6-2.5-1.5-3.4-2.8-.9-1.2-1.4-2.6-1.4-4.1 0-2 .8-3.9 2.2-5.3C7.1 4.3 9 3.5 11 3.5zM11 0C8.8 0 6.7.6 4.9 1.9 3.1 3.1 1.7 4.8.8 6.8c-.8 2-1 4.2-.6 6.3.4 2.1 1.5 4.1 3 5.6s3.5 2.6 5.6 3c2.1.4 4.3.2 6.4-.6 2-.8 3.7-2.2 4.9-4.1 1.2-1.8 1.9-3.9 1.9-6.1 0-2.9-1.2-5.7-3.2-7.8C16.7 1.2 13.9 0 11 0z" />
+                  </svg>
+                  <span>выше 30%</span>
+                </label>
+              </li>
+
+            </ul>
+
+          </fieldset> -->
+
           <fieldset class="choice-filler">
             <legend>Наполнители:</legend>
             <ul class="filter-checkbox">
@@ -242,11 +300,11 @@
                   <input class="check__input" type="checkbox" name="filler" value="choko" checked>
                   <svg class="check__box" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
                     viewBox="0 0 24 20" xml:space="preserve">
-                    <path class="check__on" fill="none" opacity=".8"
+                    <path class="check__on" fill="none" opacity="0.8"
                       d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
-                    <path class="check__on" fill="none" opacity=".8"
+                    <path class="check__on" fill="none" opacity="0.8"
                       d="M18.3 17.4c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3-.2-.2-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6.2-.2.4-.3.6-.3h14.7L18.7.3c-.4-.2-.9-.3-1.3-.3H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V8.8l-1.7 1.7v6.9z" />
-                    <path class="check__off" fill="#fff" opacity=".8"
+                    <path class="check__off" fill="#fff" opacity="0.8"
                       d="M17.4 1.7c.2 0 .5.1.6.3.2.2.3.4.3.6v14.8c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3s-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6s.4-.3.6-.3h14.8zm0-1.7H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V2.6c0-.7-.3-1.4-.8-1.8-.5-.5-1.1-.8-1.8-.8z" />
                   </svg>
                   <span>шоколадные</span>
@@ -258,11 +316,11 @@
                   <input class="check__input" type="checkbox" name="filler" value="shugar" checked>
                   <svg class="check__box" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
                     viewBox="0 0 24 20" xml:space="preserve">
-                    <path class="check__on" fill="none" opacity=".8"
+                    <path class="check__on" fill="none" opacity="0.8"
                       d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
-                    <path class="check__on" fill="none" opacity=".8"
+                    <path class="check__on" fill="none" opacity="0.8"
                       d="M18.3 17.4c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3-.2-.2-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6.2-.2.4-.3.6-.3h14.7L18.7.3c-.4-.2-.9-.3-1.3-.3H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V8.8l-1.7 1.7v6.9z" />
-                    <path class="check__off" fill="#fff" opacity=".8"
+                    <path class="check__off" fill="#fff" opacity="0.8"
                       d="M17.4 1.7c.2 0 .5.1.6.3.2.2.3.4.3.6v14.8c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3s-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6s.4-.3.6-.3h14.8zm0-1.7H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V2.6c0-.7-.3-1.4-.8-1.8-.5-.5-1.1-.8-1.8-.8z" />
                   </svg>
                   <span>сахарные присыпки</span>
@@ -274,11 +332,11 @@
                   <input class="check__input" type="checkbox" name="filler" value="fruits">
                   <svg class="check__box" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
                     viewBox="0 0 24 20" xml:space="preserve">
-                    <path class="check__on" fill="none" opacity=".8"
+                    <path class="check__on" fill="none" opacity="0.8"
                       d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
-                    <path class="check__on" fill="none" opacity=".8"
+                    <path class="check__on" fill="none" opacity="0.8"
                       d="M18.3 17.4c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3-.2-.2-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6.2-.2.4-.3.6-.3h14.7L18.7.3c-.4-.2-.9-.3-1.3-.3H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V8.8l-1.7 1.7v6.9z" />
-                    <path class="check__off" fill="#fff" opacity=".8"
+                    <path class="check__off" fill="#fff" opacity="0.8"
                       d="M17.4 1.7c.2 0 .5.1.6.3.2.2.3.4.3.6v14.8c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3s-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6s.4-.3.6-.3h14.8zm0-1.7H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V2.6c0-.7-.3-1.4-.8-1.8-.5-.5-1.1-.8-1.8-.8z" />
                   </svg>
                   <span>фрукты</span>
@@ -290,11 +348,11 @@
                   <input class="check__input" type="checkbox" name="filler" value="syrup">
                   <svg class="check__box" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
                     viewBox="0 0 24 20" xml:space="preserve">
-                    <path class="check__on" fill="none" opacity=".8"
+                    <path class="check__on" fill="none" opacity="0.8"
                       d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
-                    <path class="check__on" fill="none" opacity=".8"
+                    <path class="check__on" fill="none" opacity="0.8"
                       d="M18.3 17.4c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3-.2-.2-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6.2-.2.4-.3.6-.3h14.7L18.7.3c-.4-.2-.9-.3-1.3-.3H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V8.8l-1.7 1.7v6.9z" />
-                    <path class="check__off" fill="#fff" opacity=".8"
+                    <path class="check__off" fill="#fff" opacity="0.8"
                       d="M17.4 1.7c.2 0 .5.1.6.3.2.2.3.4.3.6v14.8c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3s-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6s.4-.3.6-.3h14.8zm0-1.7H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V2.6c0-.7-.3-1.4-.8-1.8-.5-.5-1.1-.8-1.8-.8z" />
                   </svg>
                   <span>сиропы</span>
@@ -306,11 +364,11 @@
                   <input class="check__input" type="checkbox" name="filler" value="jam">
                   <svg class="check__box" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
                     viewBox="0 0 24 20" xml:space="preserve">
-                    <path class="check__on" fill="none" opacity=".8"
+                    <path class="check__on" fill="none" opacity="0.8"
                       d="M6.7 5.5L4.1 8l7.1 6.8L24 2.6 21.4.1 11.2 9.8 6.7 5.5z" />
-                    <path class="check__on" fill="none" opacity=".8"
+                    <path class="check__on" fill="none" opacity="0.8"
                       d="M18.3 17.4c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3-.2-.2-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6.2-.2.4-.3.6-.3h14.7L18.7.3c-.4-.2-.9-.3-1.3-.3H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V8.8l-1.7 1.7v6.9z" />
-                    <path class="check__off" fill="#fff" opacity=".8"
+                    <path class="check__off" fill="#fff" opacity="0.8"
                       d="M17.4 1.7c.2 0 .5.1.6.3.2.2.3.4.3.6v14.8c0 .2-.1.5-.3.6-.2.2-.4.3-.6.3H2.6c-.2 0-.5-.1-.6-.3s-.3-.4-.3-.6V2.6c0-.2.1-.4.3-.6s.4-.3.6-.3h14.8zm0-1.7H2.6C1.9 0 1.3.3.8.8S0 1.9 0 2.6v14.8c0 .7.3 1.4.8 1.8.5.5 1.1.8 1.8.8h14.8c.7 0 1.4-.3 1.8-.8.5-.5.8-1.2.8-1.8V2.6c0-.7-.3-1.4-.8-1.8-.5-.5-1.1-.8-1.8-.8z" />
                   </svg>
                   <span>джемы</span>
@@ -328,15 +386,14 @@
         <h2 class="visually-hidden">Карточки товаров</h2>
         <ul class="catalog-list">
           <li class="catalog-item" tabindex="0">
-            <a href="">
-              <img class="icecream" src="img/hit1.jpg" width="267" height="267"
-                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-              <p>310 <span class="ruble"></span><span class="small-kg">/кг</span></p>
-              <h3><span>Сливочное с апельсиновым джемом и&nbsp;цитрусовой стружкой</span></h3>
-              <div class="card" tabindex="0">
-                <button class="item-button" type="button">Быстрый просмотр</button>
-              </div>
-            </a>
+            <img class="icecream" src="img/hit1.jpg" width="267" height="267"
+              alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <p>310 <span class="ruble"></span><span class="small-kg">/кг</span></p>
+            <h3><span>Сливочное с апельсиновым джемом и&nbsp;цитрусовой стружкой</span></h3>
+            <div class="card" tabindex="0">
+              <button class="item-button" type="button">Быстрый просмотр</button>
+            </div>
+
           </li>
           <li class="catalog-item" tabindex="0">
             <img class="icecream" src="img/hit2.jpg" width="267" height="267"
@@ -443,8 +500,8 @@
 
       <div class="page-set">
         <ul class="page-set__pages-list">
-          <li aria-label="на предыдущую страницу" class="page-set__controls left">
-            <!-- <a href="#"></a> -->
+          <li class="page-set__controls left">
+            <a href="#" aria-label="на предыдущую страницу"></a>
           </li>
           <li class="page-set__pages-item">
             <a class="page-set__page-link page-set__page-link--active" href="#">1</a>
@@ -461,8 +518,8 @@
           <li class="page-set__pages-item">
             <a class="page-set__page-link" href="#">5</a>
           </li>
-          <li class="page-set__controls right" aria-label="на следующую страницу">
-            <!-- <a href="#"></a> -->
+          <li class="page-set__controls right">
+            <a href="#" aria-label="на следующую страницу"></a>
           </li>
         </ul>
 
@@ -490,16 +547,6 @@
             </svg></a>
         </li>
         <li><a class="footer__social-link footer__social-link--ig" href="#" aria-label="Инстаграм">
-            <!-- <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 32 32"
-              xml:space="preserve">
-              <path fill="#fff"
-                d="M20.9 16c0 1.3-.5 2.6-1.5 3.5-.9.9-2.1 1.5-3.4 1.5s-2.6-.5-3.5-1.5c-1-.9-1.5-2.2-1.5-3.5 0-.4 0-.8.1-1.1h-.9v6.8h11.4v-6.8h-.9c.1.3.2.7.2 1.1z" />
-              <path fill="#fff"
-                d="M16 18.7c.5 0 1-.2 1.5-.5.4-.3.8-.7 1-1.2.2-.5.2-1 .1-1.5s-.4-1-.7-1.4c-.4-.4-.8-.6-1.4-.7-.5-.1-1 0-1.5.2s-.9.5-1.2 1c-.3.4-.4 1-.4 1.5 0 .4.1.7.2 1 .1.3.3.6.6.9.2.2.5.4.9.6.2 0 .5.1.9.1zM21.7 10.3h-3v3h3v-3z" />
-              <path fill="#fff"
-                d="M16 0c-3.2 0-6.3.9-8.9 2.7C4.5 4.5 2.4 7 1.2 9.9 0 12.8-.3 16 .3 19.1c.6 3.1 2.1 6 4.4 8.2s5.1 3.8 8.2 4.4c3.1.6 6.3.3 9.2-.9 2.9-1.2 5.4-3.3 7.2-5.9 1.8-2.6 2.7-5.7 2.7-8.9 0-4.2-1.7-8.3-4.7-11.3S20.2 0 16 0zm8 21.7c0 .3-.1.6-.2.9-.1.3-.3.5-.5.8-.2.2-.5.4-.8.5-.2 0-.5.1-.8.1H10.3c-.3 0-.6-.1-.9-.2-.3-.1-.5-.3-.7-.5-.2-.2-.4-.5-.5-.7-.1-.3-.2-.6-.2-.9V10.3c0-.3.1-.6.2-.9.1-.3.3-.5.5-.7.2-.2.5-.4.7-.5.3-.1.6-.2.9-.2h11.4c.3 0 .6.1.9.2.3.1.5.3.8.5.2.2.4.5.5.8 0 .2.1.5.1.8v11.4z" />
-            </svg> -->
-
             <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g fill="#fff">
                 <path
