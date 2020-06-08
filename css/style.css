@@ -1210,7 +1210,8 @@ fieldset {
   position: relative;
 }
 
-.sort-select select:hover {
+.sort-select select:hover,
+.sort-select select:focus {
   color: var(--basic-grey);
   outline: none;
 }
@@ -1695,10 +1696,6 @@ opacity: 1;
   color: var(--price-kg);
 }
 
-.hit {
-  position: absolute;
-}
-
 .hit::before {
   content: "";
   position: absolute;
@@ -1722,7 +1719,8 @@ opacity: 1;
 }
 
 .catalog-item:hover .card,
-.catalog-item:focus .card {
+.catalog-item:focus .card,
+.catalog-item:focus-within .card {
   display: flex;
 }
 
@@ -2143,7 +2141,8 @@ article h3 {
   border: 2px solid var(--social-outline70);
 }
 
-.footer__social-link:hover {
+.footer__social-link:hover,
+.footer__social-link:focus {
   opacity: 1;
 }
 
