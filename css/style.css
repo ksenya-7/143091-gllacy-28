@@ -848,6 +848,10 @@ header {
   color: var(--basic-grey);
 }
 
+.price-kg {
+  color: var(--price-kg);
+}
+
 .basket-list-item>button {
   margin: 0;
   margin-right: 9px;
@@ -1345,7 +1349,7 @@ fieldset {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M11 15c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4z' fill='%23fff'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: 140%;
   opacity: 0.8;
 }
 
@@ -1560,19 +1564,54 @@ fieldset {
 
 .catalog-item {
   padding-top: 213px;
+  padding-left: 0;
 }
 
 .catalog-item .icecream {
   position: absolute;
   top: 6px;
+  left: 0;
   z-index: -1;
   width: 267px;
   height: 267px;
   border-radius: 50%;
 }
 
+.catalog-item p {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 27px;
+  margin-left: 6px;
+
+  font-weight: 700;
+  font-size: 45px;
+  font-stretch: extra-expanded;
+  line-height: 45px;
+  text-shadow: 0px 1px 3px var(--text-shadow-grey);
+
+  -webkit-transform: scale(1.05, 1);
+  -moz-transform: scale(1.05, 1);
+  -ms-transform: scale(1.05, 1);
+  -o-transform: scale(1.05, 1);
+  transform: scale(1.05, 1);
+}
+
+/* 
+.ruble {
+  -o-transform: scale(1.5, 1);
+} */
+
+.small-kg {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  font-stretch: condensed;
+}
+
 .catalog-item h3 {
   width: 267px;
+  margin-top: 27px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -1583,24 +1622,6 @@ fieldset {
   width: 267px;
   box-shadow: 0 1px 0 var(--white20-bg);
   text-align: center;
-}
-
-.catalog-item p {
-  display: flex;
-  align-items: flex-end;
-  font-weight: 700;
-  font-size: 45px;
-  line-height: 45px;
-  text-shadow: 0px 1px 3px var(--text-shadow-grey);
-  margin-bottom: 27px;
-}
-
-.ruble {
-  width: 43px;
-  height: 40px;
-  background-image: url("/img/ruble_shadow.png");
-  background-position: 100% center;
-  background-repeat: no-repeat;
 }
 
 .card {
@@ -1629,10 +1650,6 @@ fieldset {
   line-height: 24px;
 }
 
-.price-kg {
-  color: var(--price-kg);
-}
-
 .hit::before {
   content: "";
   position: absolute;
@@ -1641,12 +1658,6 @@ fieldset {
   height: 61px;
   top: 5px;
   background-image: url(/img/hit.svg);
-}
-
-.small-kg {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 35px;
 }
 
 .catalog-item:hover,
