@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie<=11
+*/
+
 :root {
   --green-bg: #849D8F;
   --bluegrey-bg: #8996A6;
@@ -73,21 +80,24 @@
 }
 
 body {
+  min-width: 1146px;
+  min-height: 1636px;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
   color: var(--basic-white);
-  min-width: 1146px;
-  min-height: 1636px;
+
   background-color: var(--green-bg);
 }
 
 a {
   margin: 0;
   padding: 0;
+
   color: var(--basic-white);
   line-height: 18px;
   text-decoration: none;
@@ -108,6 +118,7 @@ img {
 
 .btn {
   padding: 9px 16px 11px;
+
   border: none;
   border-radius: 70px;
   color: var(--basic-white);
@@ -136,14 +147,14 @@ img {
   width: 1px;
   height: 1px;
   margin: -1px;
-  border: 0;
   padding: 0;
+
+  border: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
 
-/* раздел навигация по глвному меню раздел навигация раздел навигация раздел навигация раздел навигация раздел навигация  */
 .wrapper {
   width: auto;
 }
@@ -154,7 +165,7 @@ img {
 
 .wrapper--green {
   background-color: var(--green-bg);
-  background-image: url(/img/Group1.png);
+  background-image: url("/img/Group1.png");
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -162,7 +173,7 @@ img {
 .wrapper--bluegrey {
   display: none;
   background-color: var(--bluegrey-bg);
-  background-image: url(/img/Group2.png);
+  background-image: url("/img/Group2.png");
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -170,7 +181,7 @@ img {
 .wrapper--brown {
   display: none;
   background-color: var(--brown-bg);
-  background-image: url(/img/Group3.png);
+  background-image: url("/img/Group3.png");
   background-repeat: no-repeat;
   background-position: top center;
 }
@@ -178,31 +189,24 @@ img {
 .container {
   width: 1200px;
   margin: 0 auto;
-  padding-left: 27px;
-  padding-right: 27px;
+  padding: 0 27px;
 }
 
-.container-max {
-  width: 1172px;
-  margin: 0 auto;
-  padding-left: 13px;
-  padding-right: 13px;
-}
-
-header {
+.header {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
 }
 
-
 .main-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   width: 1146px;
   min-height: 67px;
-  margin: 4px auto 2px;
+  margin: 4px auto -3px;
+
   color: var(--basic-white);
   font-weight: 700;
   font-size: 16px;
@@ -214,15 +218,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-left: auto;
-  margin-top: 3px;
-  min-width: 244px;
-}
 
-.header-navigation {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
   margin-left: auto;
   margin-top: 3px;
   min-width: 244px;
@@ -231,10 +227,8 @@ header {
 .header-logo {
   width: 154px;
   height: 67px;
-  margin: 0;
+  margin: 5px 10px 0 0;
   padding: 0;
-  padding-top: 5px;
-  margin-right: 10px;
 }
 
 .header-logo a {
@@ -244,6 +238,7 @@ header {
 .navigation-menu span {
   margin: 0;
   padding: 0;
+
   border: none;
   box-shadow: 0 1px 0 0 var(--link-underline);
 }
@@ -253,21 +248,23 @@ header {
   flex-wrap: wrap;
   align-items: flex-start;
   position: relative;
+
   max-width: 500px;
-  margin: 0;
-  margin-right: 30px;
+  margin: -3px 30px 0 0;
   padding: 0;
 }
 
 .site-navigation>li {
   display: flex;
   position: relative;
+
   margin: 5px 0;
 }
 
 .catalog-menu::before {
   content: "";
   position: absolute;
+
   width: 100%;
   height: 20px;
   left: 0;
@@ -277,15 +274,18 @@ header {
 
 .site-navigation .navigation-menu {
   display: flex;
-  border-radius: 26px;
-  padding: 6px 13px 7px 14px;
+
   margin-right: 5px;
+  padding: 6px 13px 7px 14px;
+  border-radius: 26px;
 }
 
 .site-navigation .navigation-menu:hover,
 .site-navigation .navigation-menu:focus {
   display: flex;
+
   padding: 6px 13px 7px 14px;
+
   color: var(--basic-grey);
   background-color: var(--basic-white);
   outline: none;
@@ -293,7 +293,9 @@ header {
 
 .site-navigation .navigation-menu:active {
   display: flex;
+
   padding: 6px 17px 7px 15px;
+
   color: var(--basic-grey);
   background-color: var(--menu-active);
   box-shadow: inset 0px 2px 1px var(--menu-shadow-active);
@@ -306,10 +308,12 @@ header {
   top: 37px;
   left: -6px;
   z-index: 10;
+
   width: 143px;
   min-height: 157px;
   margin: 0;
   padding: 0;
+
   font-size: 14px;
   line-height: 16px;
   background-color: var(--basic-white);
@@ -321,7 +325,6 @@ header {
   outline: none;
 }
 
-/* раздел навигация подменю каталог         навигация подменю каталог  */
 .catalog-submenu li {
   display: flex;
   flex-direction: column;
@@ -330,6 +333,7 @@ header {
 .catalog-submenu a {
   display: flex;
   align-items: center;
+
   width: auto;
   height: auto;
   padding: 7px 5px 7px 12px;
@@ -337,16 +341,18 @@ header {
 
 .catalog-submenu li:first-child a {
   position: relative;
+
   padding: 8px 5px 8px 12px;
 }
 
 .catalog-submenu li:first-child a::after {
   content: "";
   position: absolute;
-  width: 128px;
-  height: 1px;
   left: 6px;
   bottom: 0;
+
+  width: 128px;
+  height: 1px;
   background-color: var(--basic-grey20);
 }
 
@@ -419,21 +425,22 @@ header {
 }
 
 
-/* раздел  поиск вход корзина       раздел  поиск вход корзина       раздел  поиск вход корзина        */
 .search-navigation {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+
   margin-left: 10px;
 }
 
 .search-navigation::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 20px;
   left: 0;
   bottom: 0;
+
+  width: 100%;
+  height: 20px;
   transform: translateY(100%);
 }
 
@@ -442,8 +449,10 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
   width: 32px;
   height: 32px;
+
   border-radius: 50%;
   background-color: var(--white20-bg);
 }
@@ -459,11 +468,10 @@ header {
   outline: none;
 }
 
-.search-navigation a:hover svg path,
-.search-navigation a:focus svg path {
+.search-link:hover svg path,
+.search-link:focus svg path {
   fill: var(--basic-gray);
 }
-
 
 .search-navigation:hover a {
   background-color: var(--basic-white);
@@ -479,8 +487,10 @@ header {
   position: absolute;
   top: 37px;
   right: 0;
+
   width: 341px;
   min-height: 84px;
+
   box-shadow: 0px 20px 20px var(--box-shadow);
   border-radius: 4px;
   background-color: var(--basic-beige);
@@ -496,6 +506,7 @@ header {
   margin-left: 15px;
   margin-top: 20px;
   padding-left: 15px;
+
   background-color: var(--basic-white);
   border: 1px solid var(--border-input);
   box-sizing: border-box;
@@ -506,29 +517,32 @@ header {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+
   margin-left: 10px;
 }
 
 .user-navigation::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 20px;
   left: 0;
   bottom: 0;
+
+  width: 100%;
+  height: 20px;
   transform: translateY(100%);
 }
 
 .user-navigation>a {
   display: flex;
   align-items: center;
+
   min-width: 92px;
   max-width: 120px;
   min-height: 32px;
+  padding: 0 16px;
+
   background-color: var(--white20-bg);
   border-radius: 20px;
-  padding: 0 16px;
-  box-sizing: border-box;
 }
 
 .user-navigation>a svg {
@@ -539,6 +553,7 @@ header {
 .user-navigation>a span {
   display: flex;
   flex-wrap: wrap;
+
   padding: 8px 0;
   font-weight: 500;
   font-size: 14px;
@@ -552,12 +567,12 @@ header {
 }
 
 .user-navigation:hover svg path,
-.user-navigation a:focus svg path {
+.user-link:focus svg path {
   fill: var(--basic-grey);
 }
 
-.user-navigation a:hover,
-.user-navigation a:focus {
+.user-link:hover,
+.user-link:focus {
   color: var(--basic-grey);
   background-color: var(--basic-white);
 }
@@ -566,10 +581,12 @@ header {
   display: none;
   position: absolute;
   top: 37px;
-  margin-left: -185px;
   z-index: 10;
+
   width: 277px;
   min-height: 214px;
+  margin-left: -185px;
+
   border-radius: 4px;
   box-shadow: 0px 20px 20px var(--box-shadow);
   border-radius: 4px;
@@ -587,6 +604,7 @@ header {
   margin-left: 19px;
   margin-top: 20px;
   padding-left: 15px;
+
   background-color: var(--basic-white);
   border: 1px solid var(--border-input);
   box-sizing: border-box;
@@ -597,6 +615,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
   width: 242px;
   min-height: 44px;
   margin: 20px auto auto 19px;
@@ -624,8 +643,10 @@ header {
   flex-direction: column;
   align-items: flex-start;
   align-content: space-between;
+
   width: 119px;
   min-height: 44px;
+
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
@@ -634,10 +655,12 @@ header {
 .bottom-right a {
   padding: 0;
   margin: auto auto auto 0;
+
   font-weight: 400;
   font-size: 13px;
   line-height: 15px;
   color: var(--basic-grey);
+
   border: none;
   border-radius: 0;
 }
@@ -665,26 +688,30 @@ header {
   display: flex;
   flex-wrap: wrap;
   position: relative;
+
   margin-left: 10px;
 }
 
 .basket-navigation::before {
   content: "";
   position: absolute;
-  width: 100%;
-  height: 20px;
   left: 0;
   bottom: 0;
+
+  width: 100%;
+  height: 20px;
   transform: translateY(100%);
 }
 
 .basket-navigation .basket-empty {
   display: flex;
   align-items: center;
+
   min-width: 100px;
   max-width: 130px;
   min-height: 32px;
   padding: 0 16px;
+
   background-color: var(--white20-bg);
   border-radius: 20px;
   box-sizing: border-box;
@@ -694,10 +721,12 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
   min-width: 118px;
   max-width: 148px;
   min-height: 32px;
   padding: 0 16px;
+
   color: var(--basic-grey);
   background-color: var(--basic-white);
   border-radius: 20px;
@@ -711,6 +740,7 @@ header {
 
 .basket-navigation>a span {
   padding: 8px 0;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -744,14 +774,17 @@ header {
   top: 37px;
   right: 0;
   z-index: 10;
+
   width: 539px;
   min-height: 242px;
   margin: 0;
   padding: 14px 21px 20px;
+
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
   color: var(--basic-grey);
+
   box-shadow: 0 20px 20px var(--box-shadow);
   border-radius: 4px;
   background-color: var(--basic-beige);
@@ -768,8 +801,7 @@ header {
 
   width: 494px;
   min-height: 92px;
-  margin: 0;
-  margin-bottom: 38px;
+  margin: 0 0 38px 0;
   padding: 0;
 }
 
@@ -777,6 +809,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
   min-height: 46px;
 }
 
@@ -793,8 +826,10 @@ header {
 .basket-list-item a {
   display: flex;
   align-items: center;
+
   width: 216px;
   margin-right: 31px;
+
   font-weight: 400;
   font-size: 13px;
   line-height: 16px;
@@ -823,6 +858,7 @@ header {
   position: absolute;
   bottom: 112px;
   left: 11px;
+
   width: 510px;
   height: 1px;
   background-color: var(--basket-underline);
@@ -840,25 +876,21 @@ header {
 }
 
 .basket-list-item>button {
-  padding: 9px 16px 11px;
-  border: none;
-  border-radius: 70px;
-  color: var(--basic-white);
-  box-shadow: 0px 2px 2px var(--box-shadow);
-  text-shadow: 0px 2px 5px var(--text-shadow);
-  background-image: linear-gradient(var(--gradientbutton-lightorange), var(--gradientbutton-darkorange));
-  outline: none;
-  cursor: pointer;
-
-  margin: 0;
-  margin-right: 9px;
+  margin: 0 9px 0 0;
   padding: 0;
   width: 11px;
   min-height: 11px;
+
+  color: var(--basic-white);
+  text-shadow: 0px 2px 5px var(--text-shadow);
+  box-shadow: 0 0 0 var(--transparent);
+  outline: none;
+  cursor: pointer;
+
   background-color: var(--basic-beige);
   background-image: url("/img/cross-small.svg");
+  border: none;
   border-radius: 0;
-  box-shadow: 0 0 0 var(--transparent);
 }
 
 .basket-list-item>button:hover,
@@ -872,6 +904,7 @@ header {
   margin-top: 18px;
   width: 172px;
   min-height: 44px;
+
   font-weight: 700;
   font-size: 15px;
   line-height: 16px;
@@ -882,11 +915,11 @@ header {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+
   min-height: 75px;
 }
 
 
-/* телефон и часы работы breadcrumbs       телефон и часы работы breadcrumbs   */
 header p {
   font-weight: 700;
   font-size: 14px;
@@ -899,17 +932,10 @@ header p {
   line-height: 24px;
 }
 
+.tel:hover,
+.tel:focus,
 .tel:active {
   color: var(--link-hover-footer);
-}
-
-.header-down {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 1146px;
-  min-height: 91px;
-  margin-bottom: 7px;
 }
 
 .header-bottom {
@@ -926,8 +952,7 @@ header p {
   flex-wrap: wrap;
   position: relative;
 
-  margin: 0;
-  margin-bottom: 7px;
+  margin: 0 0 7px 0;
   padding: 0;
   list-style: none;
 
@@ -947,40 +972,25 @@ header p {
   box-shadow: 0 1px 0 0 var(--link-hover-footer30);
 }
 
-.breadcrumbs::before {
+.breadcrumbs-item {
+  position: relative;
+}
+
+.breadcrumbs-item::after {
   content: "";
   position: absolute;
+  display: block;
   left: 62px;
-  top: 7px;
+  top: 6px;
   width: 6px;
   height: 6px;
-  background-image: url(/img/arrows.svg);
+  background-image: url("/img/arrows.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.breadcrumbs::after {
-  content: "";
-  position: absolute;
-  left: 137px;
-  top: 7px;
-  width: 6px;
-  height: 6px;
-  background-image: url(/img/arrows.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.header-down h3 {
-  margin: 0;
-  padding: 0;
-  margin-bottom: 35px;
-  margin-left: 4px;
-
-  font-weight: 700;
-  font-size: 35px;
-  transform: scale(1.007, 1);
-  line-height: 16px;
+.breadcrumbs-item:last-child::after {
+  display: none;
 }
 
 .worktime-tel {
@@ -1001,7 +1011,6 @@ header p {
 }
 
 
-/* intro intro intro intro intro intro intro intro intro intro intro intro intro intro intro intro intro intro  */
 .intro {
   position: relative;
 }
@@ -1032,6 +1041,7 @@ header p {
 .slide-title {
   margin-bottom: 27px;
   padding: 0 223px;
+
   font-weight: 700;
   font-size: 60px;
   line-height: 60px;
@@ -1039,9 +1049,11 @@ header p {
 
 .slide-button {
   display: block;
+
   width: 278px;
   min-height: 63px;
   padding: 9px 16px 12px;
+
   font-weight: 700;
   font-size: 32px;
   line-height: 44px;
@@ -1054,22 +1066,23 @@ header p {
   flex-wrap: wrap;
   justify-content: start;
   position: absolute;
+  top: 441px;
   left: 0;
   z-index: 20;
-  top: 441px;
+
   margin: 0;
   padding: 0;
   height: 21px;
 }
 
 .slider-controls button {
-  margin: 0;
-  margin-right: 8px;
-  padding: 0;
   width: 21px;
   height: 21px;
-  box-sizing: border-box;
+  margin: 0 8px 0 0;
+  padding: 0;
+
   text-shadow: none;
+
   background-image: none;
   background-color: var(--transparent);
   border-radius: 50%;
@@ -1097,23 +1110,25 @@ header p {
   box-shadow: none;
 }
 
-/* buns buns buns buns buns buns buns buns buns buns buns buns buns buns buns buns   */
 .bun-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0;
+
+  margin: 0 0 14px 0;
   padding: 0;
-  margin-bottom: 14px;
+  width: 1146px;
 }
 
 .bun-list li {
   display: flex;
   flex-direction: column;
-  margin: 0 0 20px 0;
-  padding: 14px 16px;
+
   width: 560px;
   min-height: 229px;
+  margin: 0 0 20px 0;
+  padding: 14px 16px;
+
   border-radius: 16px;
   background-size: cover;
   background-position: center;
@@ -1131,14 +1146,16 @@ header p {
 }
 
 .bun-list h3 {
+  margin-bottom: 17px;
+
   font-weight: 700;
   font-size: 35px;
   line-height: 41px;
-  margin-bottom: 17px;
 }
 
 .bun-list p {
   width: 540px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -1148,8 +1165,9 @@ header p {
   display: block;
   width: 164px;
   min-height: 48px;
-  margin: auto 6px 8px auto;
+  margin: 44px 6px 8px auto;
   padding: 11px 10px 9px 10px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -1160,8 +1178,9 @@ header p {
   display: block;
   width: 191px;
   min-height: 48px;
-  margin: auto 6px 8px auto;
+  margin: 44px 6px 8px auto;
   padding: 11px 10px 9px 10px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -1181,7 +1200,17 @@ button:active,
   box-shadow: inset 0px 2px 2px var(--button-active-shadow);
 }
 
-/* а тут будет оооооочень страшный фильтр ААААААААААААААААААААААААААААААААААААААААААААА а тут будет оооооочень страшный фильтр аааааааааааа а тут будет оооооочень страшный фильтр аааааааааааа */
+
+.filter-list h1 {
+  margin: 0 0 41px 4px;
+  padding: 0;
+
+  font-weight: 700;
+  font-size: 35px;
+  transform: scale(1.007, 1);
+  line-height: 16px;
+}
+
 .filter-list svg {
   flex-shrink: 0;
 }
@@ -1190,6 +1219,7 @@ button:active,
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
+
   min-width: 900px;
   min-height: 125px;
   margin-bottom: 34px;
@@ -1198,25 +1228,27 @@ button:active,
 .filter-list label {
   max-width: 300px;
   min-height: 20px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
 }
 
 fieldset {
-  margin: 0;
-  margin-right: 15px;
+  margin: 0 15px 0 0;
   padding: 0;
+
   border: 0;
   border-radius: 20px;
 }
 
 .filter-list legend {
+  margin-bottom: 6px;
   padding-left: 16px;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-  margin-bottom: 4px;
 }
 
 .sort-select label {
@@ -1233,11 +1265,13 @@ fieldset {
   position: relative;
   width: 196px;
   height: 36px;
-  padding: 10px 16px;
+  padding: 8px 16px 9px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
   color: var(--basic-white);
+
   background-color: var(--white20-bg);
   border: 0;
   border-radius: 20px;
@@ -1257,14 +1291,16 @@ fieldset {
   display: block;
   pointer-events: none;
   z-index: 10;
-  left: 172px;
-  top: 0;
+  left: 171px;
+  top: 15px;
+
   width: 11px;
   height: 10px;
+  fill: var(--basic-white);
 }
 
-.sort-select select:hover .arrow-select path,
-.sort-select select:focus .arrow-select path {
+select:hover+label path,
+select:focus+label path {
   fill: var(--basic-grey);
 }
 
@@ -1282,10 +1318,10 @@ fieldset {
   border-radius: 20px;
 }
 
-.range-controls .scale {
+.range-controls .scales {
   position: absolute;
-  top: 15px;
-  left: 19px;
+  top: 17px;
+  left: 20px;
   height: 2px;
   width: 176px;
   background: var(--range-scale);
@@ -1301,11 +1337,13 @@ fieldset {
 
 .range-controls .toggle {
   position: absolute;
-  top: 6px;
+  top: 7px;
   left: 0;
+
   width: 20px;
   height: 20px;
   padding: 0;
+
   border: 8px solid #ffffff;
   background-color: #ababab;
   border-radius: 50%;
@@ -1314,7 +1352,6 @@ fieldset {
 }
 
 .range-controls .toggle-min {
-
   left: 34px;
 }
 
@@ -1348,9 +1385,10 @@ fieldset {
 }
 
 .radio__box {
-  margin-right: 11px;
   width: 22px;
   height: 22px;
+  margin-right: 11px;
+
   overflow: hidden;
   background-color: var(--transparent);
   border-radius: 50%;
@@ -1397,12 +1435,14 @@ fieldset {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+
   min-width: 425px;
   max-width: 702px;
   min-height: 36px;
-  list-style: none;
   margin: 0;
   padding: 7px 14px;
+
+  list-style: none;
   background-color: var(--white20-bg);
   border-radius: 20px;
   box-sizing: border-box;
@@ -1428,12 +1468,10 @@ fieldset {
   min-width: 711px;
   max-width: 985px;
   min-height: 36px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin-right: -1px;
+  margin: 0 -1px 0 0;
   padding: 8px 19px 8px 16px;
 
+  list-style: none;
   background-color: var(--white20-bg);
   border-radius: 20px;
 }
@@ -1520,14 +1558,13 @@ fieldset {
 .filter-list form button {
   width: 144px;
   min-height: 36px;
-  margin: 0;
-  margin-top: 39px;
+  margin: 39px 0 0 0;
   padding: 0;
+
   text-shadow: none;
   box-shadow: none;
   background-color: var(--white20-bg);
   border: 2px solid var(--basic-white);
-  box-sizing: border-box;
   border-radius: 20px;
   background-image: none;
 }
@@ -1547,7 +1584,6 @@ fieldset {
 }
 
 
-/* раздел для каталога раздел для каталога раздел для каталога раздел для каталога раздел для каталога раздел для футера */
 .catalog {
   min-height: 370px;
 }
@@ -1563,8 +1599,7 @@ fieldset {
   flex-wrap: wrap;
   position: relative;
 
-  margin: 0;
-  margin-bottom: -5px;
+  margin: 0 0 -5px 0;
   padding: 0;
   list-style: none;
 }
@@ -1592,34 +1627,29 @@ fieldset {
   top: 6px;
   left: 0;
   z-index: -1;
+
   width: 267px;
   height: 267px;
   border-radius: 50%;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .catalog-item p {
   display: flex;
   align-items: flex-end;
-  margin-bottom: 27px;
+  /* margin: 0; */
   margin-left: 6px;
+  margin-bottom: 28px;
 
   font-weight: 700;
   font-size: 45px;
-  /* font-stretch: extra-expanded; */
   line-height: 45px;
-  text-shadow: 0px 1px 3px var(--text-shadow-grey);
+  text-align: left;
 
-  -webkit-transform: scale(1.05, 1);
-  -moz-transform: scale(1.05, 1);
-  -ms-transform: scale(1.05, 1);
-  -o-transform: scale(1.05, 1);
+  text-shadow: 0px 1px 3px var(--text-shadow-grey);
   transform: scale(1.05, 1);
 }
-
-/* 
-.ruble {
-  -o-transform: scale(1.5, 1);
-} */
 
 .small-kg {
   font-weight: 700;
@@ -1630,7 +1660,6 @@ fieldset {
 
 .catalog-item h3 {
   width: 267px;
-  margin-top: 27px;
 
   font-weight: 500;
   font-size: 16px;
@@ -1640,19 +1669,26 @@ fieldset {
 
 .catalog-item h3>span {
   width: 267px;
+
   box-shadow: 0 1px 0 var(--white20-bg);
   text-align: center;
 }
 
 .card {
+  display: flex;
   display: none;
   justify-content: center;
+  align-items: flex-end;
   position: absolute;
   left: -13px;
   top: 0;
   z-index: -2;
+
   min-height: 402px;
+  height: 115%;
   width: 293px;
+  padding-bottom: 21px;
+
   background-color: var(--white20-bg);
   box-shadow: 0px 20px 20px var(--item-shadow);
   border-radius: 4px;
@@ -1660,11 +1696,10 @@ fieldset {
 }
 
 .item-button {
-  position: absolute;
-  top: 337px;
-  z-index: 1;
-
+  width: 200px;
+  min-height: 44px;
   padding: 9px 16px 11px;
+
   border: none;
   border-radius: 70px;
   color: var(--basic-white);
@@ -1674,8 +1709,6 @@ fieldset {
   outline: none;
   cursor: pointer;
 
-  width: 200px;
-  min-height: 44px;
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
@@ -1684,11 +1717,12 @@ fieldset {
 .hit::before {
   content: "";
   position: absolute;
+  top: 5px;
   z-index: 10;
+
   width: 61px;
   height: 61px;
-  top: 5px;
-  background-image: url(/img/hit.svg);
+  background-image: url("/img/hit.svg");
 }
 
 .catalog-item:hover,
@@ -1705,14 +1739,13 @@ fieldset {
 }
 
 
-/* раздел преимуществ раздел преимуществ раздел преимуществ раздел преимуществ раздел преимуществ раздел преимуществ  */
 .features {
   width: 1146px;
   min-height: 306px;
   margin: 0 auto 40px auto;
   padding: 23px 20px 18px;
   color: var(--basic-grey);
-  background-image: url(/img/pattern.jpg);
+  background-image: url("/img/pattern.jpg");
   background-color: var(--fon-pattern);
   background-repeat: repeat;
   border-radius: 16px;
@@ -1729,11 +1762,11 @@ fieldset {
 }
 
 .features h3 {
-  margin: 0;
-  margin-bottom: 7px;
-  padding: 0;
   width: 995px;
   min-height: 60px;
+  margin: 0 0 7px 0;
+  padding: 0;
+
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -1741,50 +1774,38 @@ fieldset {
 
 .feature-item {
   position: relative;
+
   margin: 0;
-  padding: 0;
   padding: 9px 10px 12px 55px;
   font: inherit;
 }
 
-.modern-self div {
+.feature-item div {
   position: absolute;
   left: 0;
   top: 0;
+
   width: 49px;
   height: 49px;
-  background-image: url(/img/features-icecream.svg);
+}
+
+.modern-self div {
+  background-image: url("/img/features-icecream.svg");
 }
 
 .safe-company div {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 49px;
-  height: 49px;
-  background-image: url(/img/features-cow.svg);
+  background-image: url("/img/features-cow.svg");
 }
 
 .good-milk div {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 49px;
-  height: 49px;
-  background-image: url(/img/features-eco.svg);
+  background-image: url("/img/features-eco.svg");
 }
 
 .termo-delivery div {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 49px;
-  height: 49px;
-  background-image: url(/img/features-thermometer.svg);
+  background-image: url("/img/features-thermometer.svg");
 }
 
 
-/* article_and_subscribe article_and_subscribe article_and_subscribe  */
 .article_and_subscribe {
   display: flex;
   flex-wrap: wrap;
@@ -1793,10 +1814,13 @@ fieldset {
 }
 
 article {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
   width: 560px;
   min-height: 220px;
-  padding: 18px 20px 17px;
-  background-image: url(/img/fon_strawberry.jpg);
+  padding: 17px 20px;
+  background-image: url("/img/fon_strawberry.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -1804,8 +1828,8 @@ article {
 }
 
 article h3 {
-  margin: 0;
-  margin-bottom: 2px;
+  margin: 0 0 2px 0;
+
   color: var(--basic-grey);
   font-weight: 500;
   font-size: 16px;
@@ -1815,8 +1839,10 @@ article h3 {
 .article_news {
   position: relative;
   display: block;
+
   width: 307px;
   min-height: 92px;
+
   color: var(--basic-grey);
   font-weight: 700;
   font-size: 24px;
@@ -1840,14 +1866,16 @@ article h3 {
 }
 
 
-
 .subscribe {
   display: flex;
+  align-self: flex-start;
+
   width: 560px;
   min-height: 220px;
   padding: 5px 6px;
+
   color: var(--basic-grey);
-  background-image: url(/img/fon_post.png);
+  background-image: url("/img/fon_post.png");
   background-position: center;
   background-size: cover;
   border-radius: 16px;
@@ -1856,15 +1884,17 @@ article h3 {
 .subscribe-fon {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+
   padding: 20px 16px 35px 20px;
+
   background-color: var(--basic-beige);
   border-radius: 16px;
 }
 
 .subscribe-fon p {
-  margin: 5px 0;
+  margin: 5px 0 40px 0;
   padding: 0;
-  margin-bottom: 40px;
 }
 
 .subscribe form {
@@ -1878,6 +1908,7 @@ article h3 {
   min-height: 44px;
   margin-right: 10px;
   padding-left: 13px;
+
   background-color: var(--basic-white);
   border: 1px solid var(--border-input);
   box-sizing: border-box;
@@ -1885,6 +1916,15 @@ article h3 {
 }
 
 .subscribe button {
+  width: 130px;
+  min-height: 44px;
+  margin: 0;
+  padding: 10px 16px 10px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+
   border: none;
   border-radius: 70px;
   color: var(--basic-white);
@@ -1893,14 +1933,6 @@ article h3 {
   background-image: linear-gradient(var(--gradientbutton-lightorange), var(--gradientbutton-darkorange));
   outline: none;
   cursor: pointer;
-
-  margin: 0;
-  padding: 10px 16px 10px;
-  width: 130px;
-  min-height: 44px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 24px;
 }
 
 .subscribe button:hover,
@@ -1917,20 +1949,28 @@ article h3 {
 }
 
 
-/* контакты контакты контакты контакты контакты контакты контакты контакты  */
 .contacts {
   position: relative;
-  width: 1200px;
-  min-height: 430px;
-  margin: 0 auto;
+  width: 100%;
+  min-width: 1200px;
+  height: 430px;
+  margin: 0 auto 12px;
   padding: 0 auto;
-  margin-bottom: 7px;
+}
+
+.contacts img {
+  width: 100%;
+  min-width: 1200px;
+  height: 430px;
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .pin {
   position: absolute;
   bottom: 36.6%;
   left: 22.18%;
+
   width: 80px;
   height: 140px;
   background-image: url("/img/pin.svg");
@@ -1938,33 +1978,38 @@ article h3 {
 
 .contacts__adress {
   position: absolute;
-  top: 14.3%;
+  top: 50%;
   left: 72.5%;
+
   width: 303px;
   min-height: 306px;
   padding: 31px 25px 30px 25px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
   color: var(--basic-grey);
   background: var(--fon-contacts);
   border-radius: 16px;
+  transform: translateY(-50%);
 }
 
 .contacts__adress h3 {
   width: 155px;
-  margin: 0;
+  margin: 0 0 -2px 0;
   padding: 0;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
-  margin-bottom: -2px;
 }
 
 .contacts__adress a,
 .contacts__adress p {
   margin: 0;
   padding: 0;
+
   color: var(--basic-grey);
   font-weight: 700;
   font-size: 18px;
@@ -1982,11 +2027,11 @@ article h3 {
 
 .contacts__adress a {
   display: block;
-  margin: 0;
-  padding: 0;
+
   width: 137px;
   min-height: 13px;
-  margin-bottom: 1px;
+  margin: 0 0 1px 0;
+  padding: 0;
 }
 
 .contacts__adress a:hover,
@@ -2000,35 +2045,44 @@ article h3 {
   margin-bottom: 27px;
 }
 
-.contacts__adress button {
-  padding: 9px 16px 11px;
-  border: none;
-  border-radius: 70px;
-  color: var(--basic-white);
-  box-shadow: 0px 2px 2px var(--box-shadow);
-  text-shadow: 0px 2px 5px var(--text-shadow);
-  background-image: linear-gradient(var(--gradientbutton-lightorange), var(--gradientbutton-darkorange));
-  outline: none;
-  cursor: pointer;
+.contacts__adress .btn {
+  display: flex;
+  justify-content: center;
 
-  padding: 9px 16px 11px;
   width: 253px;
   min-height: 43px;
+  padding: 9px 16px 11px;
+
+  color: var(--basic-white);
   font-weight: bold;
   font-size: 18px;
   line-height: 24px;
   box-shadow: 0px 2px 2px var(--box-shadow);
 }
 
+.contacts__adress .btn:hover,
+.contacts__adress .btn:focus {
+  color: var(--basic-white);
+  background-color: var(--gradientbutton-lightorange);
+  background-image: none;
+  outline: none;
+}
 
-/* pageset-number             pageset-number            pageset-number-active-noactive pageset-number-active-noactive  */
+.contacts__adress .btn:active {
+  color: var(--basic-white);
+  background: linear-gradient(0deg, var(--button-active-black07), var(--button-active-black07)), linear-gradient(180deg, var(--gradientbutton-lightorange) 0%, var(--gradientbutton-darkorange) 100%);
+  box-shadow: inset 0px 2px 2px var(--button-active-shadow);
+  outline: none;
+}
+
+
 .page-set {
   display: flex;
   justify-content: flex-end;
+
   width: 1146px;
-  margin: 0 auto;
+  margin: 0 auto 44px auto;
   position: relative;
-  margin-bottom: 44px;
 }
 
 .page-set__pages-list {
@@ -2037,15 +2091,14 @@ article h3 {
   align-items: center;
 
   min-height: 26px;
-  width: 197px;
   margin: 0;
   padding: 0;
+
   list-style: none;
 }
 
 .page-set__pages-item {
-  margin: 0;
-  margin-left: 3px;
+  margin: 0 0 0 3px;
   padding: 0;
   font-weight: 500;
   font-size: 16px;
@@ -2056,10 +2109,12 @@ article h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+
   height: 26px;
   width: 26px;
   margin: 0;
   padding: 0;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -2097,6 +2152,7 @@ article h3 {
 
 .page-set .left {
   margin-right: 13px;
+
   background-image: url("/img/icon-left-small.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -2104,6 +2160,7 @@ article h3 {
 
 .page-set .right {
   margin-left: 17px;
+
   background-image: url("/img/icon-right-small.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -2114,14 +2171,13 @@ article h3 {
 }
 
 
-/* раздел для футера раздел для футера раздел для футера раздел для футера раздел для футера раздел для футера */
-
 .footer_list {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+
   width: 1146px;
   padding: 5px 0 40px;
 }
@@ -2129,9 +2185,11 @@ article h3 {
 .foot_line {
   position: absolute;
   top: -14px;
-  margin: 0 auto;
+
   width: 1146px;
   height: 1px;
+  margin: 0 auto;
+
   background-color: var(--white20-bg);
 }
 
@@ -2139,8 +2197,8 @@ article h3 {
   display: flex;
   flex-wrap: wrap;
 
-  margin: 0;
-  margin-top: 6px;
+  width: 31%;
+  margin: 6px 0 0 0;
   padding: 0;
   list-style: none;
 }
@@ -2149,9 +2207,11 @@ article h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 8px;
+
   width: 36px;
   height: 36px;
+  margin-right: 8px;
+
   opacity: 0.8;
   background-repeat: no-repeat;
   background-position: center;
@@ -2174,10 +2234,10 @@ article h3 {
   grid-template-columns: 143px 185px;
   position: relative;
 
-  width: 326px;
+  width: 44%;
+  min-width: 326px;
   min-height: 37px;
-  margin: 0;
-  margin-top: 8px;
+  margin: 8px 0 0 0;
   padding: 0;
   list-style: none;
 
@@ -2196,7 +2256,9 @@ article h3 {
   display: flex;
   align-items: center;
   position: relative;
+
   padding-left: 0;
+
   font-weight: 500;
 }
 
@@ -2205,7 +2267,8 @@ article h3 {
   height: 13px;
   margin-right: 7px;
   padding-left: 0;
-  background-image: url(/img/heart.svg);
+
+  background-image: url("/img/heart.svg");
 }
 
 .footer__info-link span {
@@ -2227,12 +2290,16 @@ article h3 {
 }
 
 .footer-copyright {
+  align-self: flex-end;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  width: 16%;
   min-width: 190px;
   min-height: 62px;
   margin-left: 6px;
+
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
@@ -2256,15 +2323,20 @@ article h3 {
 }
 
 
-/* форма обратной связи форма обратной связи форма обратной связи форма обратной связи форма обратной связи форма обратной связи  */
 .callback {
   display: none;
-  position: absolute;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   top: 338px;
-  left: 362px;
+  bottom: auto;
+
   width: 477px;
   min-height: 441px;
-  margin: 0 calc(50% - 600px);
   padding: 20px 25px 23px 24px;
   box-shadow: 0px 20px 20px var(--box-shadow);
   border-radius: 6px;
@@ -2273,11 +2345,10 @@ article h3 {
 }
 
 .callback-caption {
-  display: inline-block;
+  position: relative;
 }
 
 .callback-caption p {
-  position: relative;
   width: 438px;
   min-height: 37px;
   margin: 0 0 26px -1px;
@@ -2294,14 +2365,15 @@ article h3 {
   border: none;
   outline: none;
   cursor: pointer;
-
   position: absolute;
+
   width: 18px;
   height: 17px;
   margin: -5px -9px 10px 71px;
   padding: 0;
+
   background-color: var(--basic-beige);
-  background-image: url(/img/cross-big.svg);
+  background-image: url("/img/cross-big.svg");
   background-repeat: no-repeat;
   border-radius: 0;
   box-shadow: 0 0 0 var(--transparent);
@@ -2314,16 +2386,14 @@ article h3 {
 .callback form {
   margin: 0;
   padding: 0;
-
 }
 
 .callback input {
-  margin: 0;
-  padding: 0;
   width: 267px;
   min-height: 44px;
-  margin-bottom: 20px;
-  padding-left: 14px;
+  margin: 0 0 20px 0;
+  padding: 0 0 0 14px;
+
   background-color: var(--basic-white);
   border: 1px solid var(--border-input);
   box-sizing: border-box;
@@ -2335,6 +2405,7 @@ article h3 {
   min-height: 154px;
   margin: 0 0 26px 0;
   padding: 16px 14px;
+
   background-color: var(--basic-white);
   border: 1px solid var(--border-input);
   box-sizing: border-box;
@@ -2348,10 +2419,9 @@ article h3 {
 
   width: 140px;
   min-height: 44px;
-  margin: 0;
-  padding: 0;
-  margin-left: 288px;
+  margin: 0 0 0 288px;
   padding: 10px 16px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
