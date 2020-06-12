@@ -264,7 +264,8 @@
           <span>Для заказов по телефону:</span>
           <a href="tel:+78124502525" aria-label="телефон компании">8 812 450-25-25</a>
           <span class="daily-activity">&#40;с 10 до 20 ежедневно&#41;</span>
-          <a class="btn" href="form-callback.html" aria-label="открытие модального окна обратной связи">Форма обратной
+          <a class="btn popup-link" href="form-callback.html" aria-label="открытие модального окна обратной связи">Форма
+            обратной
             связи</a>
         </div>
       </section>
@@ -345,15 +346,16 @@
 
     <div class="callback">
       <div class="callback-caption">
-        <p>Мы обязательно вам ответим!<button class="close-button" type="button" aria-label="закрыть окно"></button></p>
-
+        <p>Мы обязательно вам ответим!
+          <button class="close-button popup-close" type="button" aria-label="закрыть окно"></button>
+        </p>
       </div>
-      <form action="https://echo.htmlacademy.ru" method="get">
+      <form class="callback-form" action="https://echo.htmlacademy.ru" method="get">
         <label><span class="visually-hidden">ваше имя для ответа</span>
-          <input type="text" name="name_vendor" placeholder="Имя Фамилия">
+          <input class="name-user" type="text" name="name_vendor" placeholder="Имя Фамилия">
         </label>
         <label><span class="visually-hidden">электронная почта для ответа</span>
-          <input type="email" name="email" placeholder="email@example.com" required>
+          <input class="login-user" type="email" name="email" placeholder="email@example.com" required>
         </label>
         <label><span class="visually-hidden">комментарий</span>
           <textarea rows="5" placeholder="В свободной форме"></textarea>
@@ -361,8 +363,9 @@
         <button class="btn" type="submit">Отправить</button>
       </form>
     </div>
-
   </div>
+
+  <script src="js/popup.js"></script>
 </body>
 
 </html>
