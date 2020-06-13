@@ -59,7 +59,7 @@
             </a>
             <form action="https://echo.htmlacademy.ru" method="post">
               <label><span class="visually-hidden">введите вашу электронную почту</span>
-                <input type="email" name="email" placeholder="email@example.com" required>
+                <input type="email" name="login" placeholder="email@example.com" required>
               </label>
               <label><span class="visually-hidden">введите ваш пароль</span>
                 <input type="password" name="password" placeholder="......" required>
@@ -245,7 +245,7 @@
 
             <form action="https://echo.htmlacademy.ru" method="post">
               <label><span class="visually-hidden">введите вашу электронную почту для подписки</span>
-                <input type="email" name="email" placeholder="email@example.com" required>
+                <input type="email" name="login" placeholder="email@example.com" required>
               </label>
               <button type="submit" aria-label="подписаться на рассылку">Отправить</button>
             </form>
@@ -322,7 +322,6 @@
             <div></div>
             <span>Для поставщиков</span>
           </a></li>
-        <!-- не будет ли aria-label лишним? -->
         <li class="footer__info-link footer__info-link--documents">
           <a href="#"><span>Наши документы</span></a>
         </li>
@@ -344,27 +343,33 @@
       </div>
     </footer>
 
-    <div class="callback">
-      <div class="callback-caption">
-        <p>Мы обязательно вам ответим!
-          <button class="close-button popup-close" type="button" aria-label="закрыть окно"></button>
-        </p>
-      </div>
-      <form class="callback-form" action="https://echo.htmlacademy.ru" method="get">
-        <label><span class="visually-hidden">ваше имя для ответа</span>
-          <input class="name-user" type="text" name="name_vendor" placeholder="Имя Фамилия">
-        </label>
-        <label><span class="visually-hidden">электронная почта для ответа</span>
-          <input class="login-user" type="email" name="email" placeholder="email@example.com" required>
-        </label>
-        <label><span class="visually-hidden">комментарий</span>
-          <textarea rows="5" placeholder="В свободной форме"></textarea>
-        </label>
-        <button class="btn" type="submit">Отправить</button>
-      </form>
-    </div>
-  </div>
+    <div class="modal">
+      <div class="modal-container">
+        <div class="modal-overlay"></div>
 
+        <div class="callback">
+          <div class="callback-caption">
+            <p>Мы обязательно вам ответим!
+              <button class="close-button" type="button" aria-label="закрыть окно"></button>
+            </p>
+          </div>
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <label><span class="visually-hidden">ваше имя для ответа</span>
+              <input type="text" name="name-user" placeholder="Имя Фамилия">
+            </label>
+            <label><span class="visually-hidden">электронная почта для ответа</span>
+              <input type="email" name="login" placeholder="email@example.com">
+            </label>
+            <label><span class="visually-hidden">комментарий</span>
+              <textarea rows="5" placeholder="В свободной форме"></textarea>
+            </label>
+            <button class="btn" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </div>
   <script src="js/popup.js"></script>
 </body>
 
