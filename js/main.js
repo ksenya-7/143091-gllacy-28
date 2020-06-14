@@ -1,126 +1,63 @@
-var popupLink = document.querySelector(".popup-link");
-var popupCallback = document.querySelector(".callback");
-var popupClose = popupCallback.querySelector("[type=button]");
-var popupForm = popupCallback.querySelector("form");
-var popupSubmit = popupCallback.querySelector("[type=submit]");
-var userName = popupCallback.querySelector("[name=name-user]");
-var loginLogin = popupCallback.querySelector("[name=login]");
-var modal = document.querySelector(".modal");
-var overlay = document.querySelector(".modal-overlay");
-
-var wrapper = document.querySelector(".wrapper");
-var controls = document.querySelectorAll(".control");
-var slides = document.querySelectorAll(".slider-list__item");
-var wrapperClasses = ["wrapper--green", "wrapper--bluegrey", "wrapper--brown"];
-
-var isStorageSupport = true;
-var storageName = "";
-var storageLogin = "";
-
-var closeModal = function () {
-  popupCallback.classList.remove("callback-show");
-  popupCallback.classList.remove("callback-error");
-  modal.classList.remove("modal-active");
-};
-
+var popupLink = document.querySelector(".popup-link"),
+  popupCallback = document.querySelector(".callback"),
+  popupClose = popupCallback.querySelector("[type=button]"),
+  popupForm = popupCallback.querySelector("form"),
+  popupSubmit = popupCallback.querySelector("[type=submit]"),
+  userName = popupCallback.querySelector("[name=name-user]"),
+  loginLogin = popupCallback.querySelector("[name=login]"),
+  modal = document.querySelector(".modal"),
+  overlay = document.querySelector(".modal-overlay"),
+  wrapper = document.querySelector(".wrapper"),
+  controls = document.querySelectorAll(".control"),
+  slides = document.querySelectorAll(".slider-list__item"),
+  wrapperClasses = ["wrapper--green", "wrapper--bluegrey", "wrapper--brown"],
+  isStorageSupport = !0,
+  storageName = "",
+  storageLogin = "",
+  closeModal = function () {
+    popupCallback.classList.remove("callback-show"), popupCallback.classList.remove("callback-error"), modal.classList.remove("modal-active")
+  };
 try {
-  storageLogin = localStorage.getItem("login");
-  storageName = localStorage.getItem("name");
-} catch (err) {
-  isStorageSupport = false;
+  storageLogin = localStorage.getItem("login"), storageName = localStorage.getItem("name")
+} catch (e) {
+  isStorageSupport = !1
 }
-
-popupLink.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popupCallback.classList.add("callback-show");
-  modal.classList.add("modal-active");
-
-  if (storageName && storageLogin) {
-    popupSubmit.focus();
-  } else {
-    userName.focus();
-  }
+popupLink.addEventListener("click", function (e) {
+  e.preventDefault(), popupCallback.classList.add("callback-show"), modal.classList.add("modal-active"), storageName && storageLogin ? popupSubmit.focus() : userName.focus()
+}), popupClose.addEventListener("click", function (e) {
+  e.preventDefault(), closeModal()
+}), overlay.addEventListener("click", function (e) {
+  e.preventDefault(), closeModal()
+}), window.addEventListener("keydown", function (e) {
+  27 === e.keyCode && popupCallback.classList.contains("callback-show") && (e.preventDefault(), closeModal())
+}), popupForm.addEventListener("submit", function (e) {
+  userName.value && loginLogin.value ? isStorageSupport && (localStorage.setItem("login", loginLogin.value), localStorage.setItem("name", userName.value)) : (e.preventDefault(), popupCallback.classList.remove("callback-error"), popupCallback.offsetWidth, popupCallback.classList.add("callback-error"))
 });
-
-popupClose.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  closeModal();
-});
-
-overlay.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  closeModal();
-});
-
-window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (popupCallback.classList.contains("callback-show")) {
-      evt.preventDefault();
-      closeModal();
-    }
-  }
-});
-
-popupForm.addEventListener("submit", function (evt) {
-  if (!userName.value || !loginLogin.value) {
-    evt.preventDefault();
-    popupCallback.classList.remove("callback-error");
-    popupCallback.offsetWidth = popupCallback.offsetWidth;
-    popupCallback.classList.add("callback-error");
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem("login", loginLogin.value);
-      localStorage.setItem("name", userName.value);
-    }
-  }
-});
-
 var removeWrapperClasses = function () {
-  for (var i = 0; i < wrapperClasses.length; i++) {
-    wrapper.classList.remove(wrapperClasses[i]);
-  }
-};
-
-var hideAllSlides = function () {
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("slide-current");
-  }
-};
-
-var removeAble = function () {
-  for (var i = 0; i < slides.length; i++) {
-    controls[i].classList.remove("able");
-  }
-}
-
-if (controls.length) {
-  controls.forEach(function (el, index) {
-    el.addEventListener("click", function () {
-      removeWrapperClasses();
-      hideAllSlides();
-      removeAble();
-      slides[index].classList.add("slide-current");
-      wrapper.classList.add(wrapperClasses[index]);
-      controls[index].classList.add("able");
-    });
-  });
-}
-
-ymaps.ready(init);
+    for (var e = 0; e < wrapperClasses.length; e++) wrapper.classList.remove(wrapperClasses[e])
+  },
+  hideAllSlides = function () {
+    for (var e = 0; e < slides.length; e++) slides[e].classList.remove("slide-current")
+  },
+  removeAble = function () {
+    for (var e = 0; e < slides.length; e++) controls[e].classList.remove("able")
+  };
 
 function init() {
-  var myMap = new ymaps.Map("map", {
-    center: [59.939290, 30.32944],
+  var e = new ymaps.Map("map", {
+    center: [59.93929, 30.32944],
     zoom: 16,
     behaviors: ["drag"]
   });
-
   myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: 'img/pin.svg',
+    iconLayout: "default#image",
+    iconImageHref: "img/pin.svg",
     iconImageSize: [80, 140],
     iconImageOffset: [-40, -140]
-  })
-
-  myMap.geoObjects.add(myPlacemark);
+  }), e.geoObjects.add(myPlacemark)
 }
+controls.length && controls.forEach(function (e, a) {
+  e.addEventListener("click", function () {
+    removeWrapperClasses(), hideAllSlides(), removeAble(), slides[a].classList.add("slide-current"), wrapper.classList.add(wrapperClasses[a]), controls[a].classList.add("able")
+  })
+}), ymaps.ready(init);
