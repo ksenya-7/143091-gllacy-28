@@ -8,6 +8,11 @@ var loginLogin = popupCallback.querySelector("[name=login]");
 var modal = document.querySelector(".modal");
 var overlay = document.querySelector(".modal-overlay");
 
+var wrapper = document.querySelector(".wrapper");
+var controls = document.querySelectorAll(".control");
+var slides = document.querySelectorAll(".slider-list__item");
+var wrapperClasses = ["wrapper--green", "wrapper--bluegrey", "wrapper--brown"];
+
 var isStorageSupport = true;
 var storageName = "";
 var storageLogin = "";
@@ -26,7 +31,6 @@ try {
 }
 
 popupLink.addEventListener("click", function (evt) {
-  "use strict";
   evt.preventDefault();
   popupCallback.classList.add("callback-show");
   modal.classList.add("modal-active");
@@ -57,7 +61,7 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-popupForm.addEventListener("submit", function (evt) { //popupForm.onsubmit = function(evt) - это то же самое?
+popupForm.addEventListener("submit", function (evt) {
   if (!userName.value || !loginLogin.value) {
     evt.preventDefault();
     popupCallback.classList.remove("callback-error");
@@ -70,3 +74,53 @@ popupForm.addEventListener("submit", function (evt) { //popupForm.onsubmit = fun
     }
   }
 });
+
+var removeWrapperClasses = function () {
+  for (var i = 0; i < wrapperClasses.length; i++) {
+    wrapper.classList.remove(wrapperClasses[i]);
+  }
+};
+
+var hideAllSlides = function () {
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("slide-current");
+  }
+};
+
+var removeAble = function () {
+  for (var i = 0; i < slides.length; i++) {
+    controls[i].classList.remove("able");
+  }
+}
+
+if (controls.length) {
+  controls.forEach(function (el, index) {
+    el.addEventListener("click", function () {
+      removeWrapperClasses();
+      hideAllSlides();
+      removeAble();
+      slides[index].classList.add("slide-current");
+      wrapper.classList.add(wrapperClasses[index]);
+      controls[index].classList.add("able");
+    });
+  });
+}
+
+ymaps.ready(init);
+
+function init() {
+  var myMap = new ymaps.Map("map", {
+    center: [59.939290, 30.32944],
+    zoom: 16,
+    behaviors: ["drag"]
+  });
+
+  myPlacemark = new ymaps.Placemark([59.938635, 30.323118], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/pin.svg',
+    iconImageSize: [80, 140],
+    iconImageOffset: [-40, -140]
+  })
+
+  myMap.geoObjects.add(myPlacemark);
+}

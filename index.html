@@ -102,24 +102,24 @@
 
         <div class="slider">
           <ul class="slider-list">
-            <li class="slider-list__item slide slide-current">
+            <li class="slider-list__item slide-current">
               <h3 class="slide-title">Крем-брюле и пломбир с&nbsp;малиновым джемом</h3>
               <a class="btn slide-button" href="#" aria-label="положить в корзину">Давайте оба! </a>
             </li>
-            <li class="slider-list__item slide">
+            <li class="slider-list__item">
               <h3 class="slide-title">Шоколадный пломбир и&nbsp;лимонный сорбет</h3>
               <a class="btn slide-button" href="#" aria-label="положить в корзину">Давайте оба! </a>
             </li>
-            <li class="slider-list__item slide">
+            <li class="slider-list__item">
               <h3 class="slide-title">Пломбир с помадкой и&nbsp;клубничный щербет</h3>
               <a class="btn slide-button" href="#" aria-label="положить в корзину">Давайте оба! </a>
             </li>
           </ul>
 
           <div class="slider-controls">
-            <button class="able" type="button" aria-label="первый слайд зелёный фон"></button>
-            <button type="button" aria-label="второй слайд сизый фон"></button>
-            <button type="button" aria-label="третий слайд коричневый фон"></button>
+            <button class="control able" type="button" aria-label="первый слайд зелёный фон"></button>
+            <button class="control" type="button" aria-label="второй слайд сизый фон"></button>
+            <button class="control" type="button" aria-label="третий слайд коричневый фон"></button>
           </div>
         </div>
       </section>
@@ -255,6 +255,7 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
+        <div class="yandex-map" id="map"></div>
         <img width="1200" height="430" src="img/map.png" alt="Карта с расположением магазина">
         <div class="pin"></div>
 
@@ -370,7 +371,10 @@
     </div>
 
   </div>
-  <script src="js/popup.js"></script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<cf1f0314-9867-4f32-b555-e479849c44f6>"
+    type="text/javascript"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
