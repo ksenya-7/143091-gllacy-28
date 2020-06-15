@@ -199,6 +199,7 @@ img {
   transform: translateX(-50%);
 
   background: linear-gradient(180deg, var(--white20-bg) 0%, var(--transparent) 100%);
+  pointer-events: none;
 }
 
 .main-navigation {
@@ -647,12 +648,6 @@ img {
   line-height: 16px;
   padding: 9px 16px 11px;
 
-  border: none;
-  border-radius: 70px;
-  color: var(--basic-white);
-  box-shadow: 0px 2px 2px var(--box-shadow);
-  text-shadow: 0px 2px 5px var(--text-shadow);
-  background-image: linear-gradient(var(--gradientbutton-lightorange), var(--gradientbutton-darkorange));
   outline: none;
   cursor: pointer;
 }
@@ -702,7 +697,6 @@ img {
   outline: none;
 }
 
-/* корзина-корзина корзина-корзина корзина-корзина корзина-корзина */
 .basket-navigation {
   display: flex;
   flex-wrap: wrap;
@@ -1234,6 +1228,7 @@ img {
   text-align: center;
 }
 
+.btn:hover,
 .put-raspberry:hover,
 .put-choko:hover {
   background-color: var(--gradientbutton-lightorange);
