@@ -10,7 +10,7 @@
 
 <body>
   <div class="wrapper wrapper--green">
-    <header class="header container">
+    <header class="container">
       <nav class="main-navigation">
         <a class="header-logo">
           <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Gllacy">
@@ -21,11 +21,11 @@
               <span>Каталог</span>
             </a>
             <ul class="catalog-submenu">
-              <li><a href="blank.html"><strong>Новинки</strong></a></li>
-              <li><a href="catalog.html">Сливочное</a></li>
-              <li><a href="blank.html">Щербеты</a></li>
-              <li><a href="blank.html">Фруктовый лед</a></li>
-              <li><a href="blank.html">Мелорин</a></li>
+              <li class="catalog-submenu__item"><a href="blank.html"><span class="strong-menu">Новинки</span></a></li>
+              <li class="catalog-submenu__item"><a href="catalog.html">Сливочное</a></li>
+              <li class="catalog-submenu__item"><a href="blank.html">Щербеты</a></li>
+              <li class="catalog-submenu__item"><a href="blank.html">Фруктовый лед</a></li>
+              <li class="catalog-submenu__item"><a href="blank.html">Мелорин</a></li>
             </ul>
           </li>
           <li><a class="navigation-menu" href="blank.html"><span>Доставка и оплата</span></a></li>
@@ -43,7 +43,7 @@
             <form action="#" method="get">
               <label>
                 <span class="visually-hidden">поиск по сайту</span>
-                <input type="search" name="search" placeholder="Что ищем?">
+                <input type="search" name="search" placeholder="Крем-брюле">
               </label>
             </form>
           </div>
@@ -65,7 +65,7 @@
                 <input type="password" name="password" placeholder="......" required>
               </label>
               <div class="user-bottom">
-                <button type="submit">Войти</button>
+                <button class="btn" type="submit">Войти</button>
                 <div class="bottom-right">
                   <a href="#"><span>Забыли пароль?</span></a>
                   <a href="#"><span>Новая регистрация</span></a>
@@ -158,7 +158,8 @@
               &#8381;
               <span class="small-kg">/кг</span>
             </p>
-            <h3><span>Сливочное с апельсиновым джемом и&nbsp;цитрусовой стружкой</span></h3>
+            <h3><span class="catalog-item_description">Сливочное с апельсиновым джемом и&nbsp;цитрусовой стружкой</span>
+            </h3>
             <div class="card">
               <button class="btn item-button" type="button">Быстрый просмотр</button>
             </div>
@@ -167,7 +168,7 @@
             <img class="icecream" src="img/hit2.jpg" width="267" height="267"
               alt="Сливочно-кофейное с кусочками шоколада">
             <p>380 &#8381;<span class="small-kg">/кг</span></p>
-            <h3><span>Сливочно-кофейное с&nbsp;кусочками шоколада</span></h3>
+            <h3><span class="catalog-item_description">Сливочно-кофейное с&nbsp;кусочками шоколада</span></h3>
             <div class="card">
               <button class="btn item-button" type="button">Быстрый просмотр</button>
             </div>
@@ -176,7 +177,8 @@
             <img class="icecream" src="img/hit3.jpg" width="267" height="267"
               alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p>355 &#8381;<span class="small-kg">/кг</span></p>
-            <h3><span>Сливочно-клубничное с&nbsp;присыпкой&nbsp;из&nbsp;белого шоколада</span></h3>
+            <h3><span class="catalog-item_description">Сливочно-клубничное с&nbsp;присыпкой&nbsp;из&nbsp;белого
+                шоколада</span></h3>
             <div class="card">
               <button class="btn item-button" type="button">Быстрый просмотр</button>
             </div>
@@ -185,7 +187,7 @@
             <img class="icecream" src="img/hit4.jpg" width="267" height="267"
               alt="Сливочное крем-брюле с карамельной подливкой">
             <p>415 &#8381;<span class="small-kg">/кг</span></p>
-            <h3><span>Сливочное крем-брюле с&nbsp;карамельной подливкой</span></h3>
+            <h3><span class="catalog-item_description">Сливочное крем-брюле с&nbsp;карамельной подливкой</span></h3>
             <div class="card">
               <button class="btn item-button" type="button">Быстрый просмотр</button>
             </div>
@@ -226,7 +228,7 @@
       </section>
 
       <div class="article_and_subscribe container">
-        <article>
+        <article class="article">
           <h3>Новое в нашем блоге</h3>
           <a class="article_news" href="blank.html">
             <p>10 способов сервировки
@@ -259,15 +261,18 @@
         <img width="1200" height="430" src="img/map.png" alt="Карта с расположением магазина">
         <div class="pin"></div>
 
-        <div class="contacts__adress">
-          <h3>Адрес главного офиса и офлайн-магазина:</h3>
-          <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-          <span>Для заказов по телефону:</span>
-          <a href="tel:+78124502525" aria-label="телефон компании">8 812 450-25-25</a>
-          <span class="daily-activity">&#40;с 10 до 20 ежедневно&#41;</span>
-          <a class="btn popup-link" href="form-callback.html" aria-label="открытие модального окна обратной связи">Форма
-            обратной
-            связи</a>
+        <div class="container_adress">
+          <div class="contacts__adress">
+            <h3>Адрес главного офиса и офлайн-магазина:</h3>
+            <p>ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+            <span>Для заказов по телефону:</span>
+            <a href="tel:+78124502525" aria-label="телефон компании">8 812 450-25-25</a>
+            <span class="daily-activity">&#40;с 10 до 20 ежедневно&#41;</span>
+            <a class="btn popup-link" href="form-callback.html"
+              aria-label="открытие модального окна обратной связи">Форма
+              обратной
+              связи</a>
+          </div>
         </div>
       </section>
     </main>
@@ -321,16 +326,16 @@
         <li class="footer__info-link footer__info-link--provider">
           <a href="#" aria-label="информация для поставщиков">
             <div></div>
-            <span>Для поставщиков</span>
+            <span class="footer-info-link__name">Для поставщиков</span>
           </a></li>
         <li class="footer__info-link footer__info-link--documents">
-          <a href="#"><span>Наши документы</span></a>
+          <a href="#"><span class="footer-info-link__name">Наши документы</span></a>
         </li>
         <li class="footer__info-link footer__info-link--output">
-          <a href="#"><span>О производстве</span></a>
+          <a href="#"><span class="footer-info-link__name">О производстве</span></a>
         </li>
         <li class="footer__info-link footer__info-link--eco">
-          <a href="#"><span>Экологические стандарты</span></a>
+          <a href="#"><span class="footer-info-link__name">Экологические стандарты</span></a>
         </li>
       </ul>
 
@@ -338,7 +343,7 @@
         <a href="https://up.htmlacademy.ru/htmlcss/28"
           aria-label="переход на страницу курса HTMLacademy: лендинг интенсива «HTML и CSS. Профессиональная вёрстка сайтов»">
           <img src="img/logo-htmlacademy.svg" width="108" height="39" alt="логотип HTMLacademy"></a>
-        <p>Сделано в <a href="https://up.htmlacademy.ru/htmlcss/28"
+        <p>Сделано в <a class="footer-copyright__link" href="https://up.htmlacademy.ru/htmlcss/28"
             aria-label="переход на страницу курса HTMLacademy: лендинг интенсива «HTML и CSS. Профессиональная вёрстка сайтов»">
             <span>HTML Academy</span></a> © 2019</p>
       </div>
@@ -364,7 +369,7 @@
             <label><span class="visually-hidden">комментарий</span>
               <textarea rows="5" placeholder="В свободной форме"></textarea>
             </label>
-            <button class="btn" type="submit">Отправить</button>
+            <button class="btn callback__button" type="submit">Отправить</button>
           </form>
         </div>
       </div>
