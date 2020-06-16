@@ -149,10 +149,14 @@ img {
 }
 
 .wrapper-catalog {
+  margin: 0;
+  padding: 0;
   background-color: var(--green-bg);
 }
 
 .wrapper--green {
+  margin: 0;
+  padding: 0;
   width: auto;
   background-color: var(--green-bg);
   background-image: url("../img/group1.png");
@@ -161,6 +165,8 @@ img {
 }
 
 .wrapper--bluegrey {
+  margin: 0;
+  padding: 0;
   width: auto;
   background-color: var(--bluegrey-bg);
   background-image: url("../img/group2.png");
@@ -169,6 +175,8 @@ img {
 }
 
 .wrapper--brown {
+  margin: 0;
+  padding: 0;
   width: auto;
   background-color: var(--brown-bg);
   background-image: url("../img/group3.png");
@@ -522,6 +530,7 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  color: var(--text-input);
 
   background-color: var(--basic-white);
   border: 1px solid var(--border-input);
@@ -625,6 +634,7 @@ img {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  color: var(--text-input);
 
   background-color: var(--basic-white);
   border: 1px solid var(--border-input);
@@ -816,7 +826,7 @@ img {
 
   width: 494px;
   min-height: 92px;
-  margin: 0 0 22px 0;
+  margin: 0 0 23px 0;
   padding: 0;
 }
 
@@ -894,6 +904,8 @@ img {
 }
 
 .basket-bottom p {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 15px;
   line-height: 16px;
@@ -958,6 +970,8 @@ img {
 }
 
 .worktime-tel p {
+  margin: 0;
+  padding: 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -1039,10 +1053,14 @@ img {
 }
 
 .worktime-tel a {
+  margin: 0;
+  padding: 0;
   margin-left: auto;
 }
 
 .worktime-tel p {
+  margin: 0;
+  padding: 0;
   margin-left: auto;
 }
 
@@ -1075,6 +1093,8 @@ img {
 }
 
 .slide-title {
+  margin: 0;
+  padding: 0;
   margin-bottom: 27px;
   padding: 0 223px;
 
@@ -1188,6 +1208,8 @@ img {
 }
 
 .bun-list h3 {
+  margin: 0;
+  padding: 0;
   margin-bottom: 17px;
 
   font-weight: 700;
@@ -1196,6 +1218,8 @@ img {
 }
 
 .bun-list p {
+  margin: 0;
+  padding: 0;
   width: 540px;
 
   font-weight: 700;
@@ -1686,8 +1710,8 @@ form .filter-list__button {
 .catalog-item p {
   display: flex;
   align-items: flex-end;
-  margin-left: 6px;
-  margin-bottom: 28px;
+  margin: 0 0 28px 6px;
+  padding: 0;
 
   font-weight: 700;
   font-size: 45px;
@@ -1827,6 +1851,11 @@ form .filter-list__button {
   font: inherit;
 }
 
+.feature-item p {
+  margin: 0;
+  padding: 0;
+}
+
 .feature-item div {
   position: absolute;
   left: 0;
@@ -1897,6 +1926,11 @@ form .filter-list__button {
   line-height: 30px;
 }
 
+.article_news p {
+  margin: 0;
+  padding: 0;
+}
+
 .article_news svg {
   position: absolute;
   top: 26px;
@@ -1960,6 +1994,7 @@ form .filter-list__button {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  color: var(--text-input);
 
   background-color: var(--basic-white);
   border: 1px solid var(--border-input);
@@ -2375,6 +2410,11 @@ form .filter-list__button {
   line-height: 18px;
 }
 
+.footer-copyright p {
+  margin: 0;
+  padding: 0;
+}
+
 .footer-copyright>a {
   display: flex;
   width: 108px;
@@ -2461,6 +2501,7 @@ form .filter-list__button {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  color: var(--text-input);
 
   background-color: var(--basic-white);
   border: 1px solid var(--border-input);
