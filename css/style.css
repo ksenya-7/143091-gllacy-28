@@ -321,6 +321,7 @@ img {
   line-height: 16px;
   background-color: var(--basic-white);
   border-radius: 4px;
+  box-shadow: 0px 20px 20px var(--box-shadow);
 }
 
 .catalog-menu:hover .catalog-submenu {
